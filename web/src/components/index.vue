@@ -207,7 +207,22 @@
 					</li>
 				</ul>
 				<!-- 页码部分 -->
-				
+				<div class="tou4">
+					<el-pagination
+						@size-change="handleSizeChange"
+						@current-change="handleCurrentChange"
+						:current-page.sync="currentPage3"
+						:page-size="100"
+						layout="prev, pager, next, jumper"
+						:total="1000">
+					</el-pagination>
+				</div>
+			</div>
+		</div>
+		<!-- 征师令 -->
+		<div class="tou5">
+			<div class="tou5-1">
+				<h1><a href="#">— 征师令 —</a></h1>
 			</div>
 		</div>
 	</div>
@@ -217,15 +232,24 @@
 export default {
   name: 'index',
   props: {},
+	methods: {
+		handleSizeChange(val) {
+			console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange(val) {
+        console.log(`当前页: ${val}`);
+      }
+    },
 	data(){
 		return {
 			imagesbox:[
-						{id:0,idView:require("../imges/lun1.jpg")},
-						{id:1,idView:require("../imges/lun2.jpg")},
-						{id:2,idView:require("../imges/lun3.jpg")},
-						{id:3,idView:require("../imges/lun4.jpg")},
-						]
-			}
+				{id:0,idView:require("../imges/lun1.jpg")},
+				{id:1,idView:require("../imges/lun2.jpg")},
+				{id:2,idView:require("../imges/lun3.jpg")},
+				{id:3,idView:require("../imges/lun4.jpg")},
+			],
+			currentPage3: 1,	
+		}
 	}
 }
 </script>
@@ -385,13 +409,10 @@ a{
 	width: @kuan;
 	margin: 0 auto;
 }
-.tou3-1 h1{
+.tou3-1 h1,.tou5-1 h1{
 	height: 100px;
 	text-align: center;
 	line-height: 100px;
-}
-.tou3-1 h1 a{
-	color: #000;
 }
 .tou3-2 li{
 	width: 340px;
@@ -458,5 +479,18 @@ a{
 .zli3 i:hover{
 	color: #d3dce6;
 }
-
+.tou4{
+	width: @kuan+23px;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+}
+// 征师令
+.tou5{
+	width: 100%;
+}
+.tou5-1{
+	width: @kuan;
+	margin: 0 auto;
+}
 </style>
