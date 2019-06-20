@@ -46,7 +46,7 @@
 					<li>首页</li>
 					<li>商城</li>
 					<li>关于我们</li>
-					<li>征师令</li>
+					<li>更多精品</li>
 						<el-dropdown>
 							<el-button type="primary">
 								入口<i class="el-icon-arrow-down el-icon--right"></i>
@@ -216,13 +216,73 @@
 						layout="prev, pager, next, jumper"
 						:total="1000">
 					</el-pagination>
+					<div class="cakan">
+						<p class="el-icon-s-unfold">点击查看更多</p>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- 征师令 -->
+		<!-- 更多精品 -->
 		<div class="tou5">
 			<div class="tou5-1">
-				<h1><a href="#">— 征师令 —</a></h1>
+				<h1><a href="#">— 更多精品 —</a></h1>
+				<div class="tou5-2">
+					<el-tabs :tab-position="tabPosition">
+						<el-tab-pane label="企业">
+							<ul class="tou5-3">
+								<li class="zli-1">
+									<a href="#">
+										<img src="../imges/wangye6.png" alt="">
+										<div class="zli1-1">
+											<h1>三维设计平台网站模板</h1>
+											<div class="zli2-1">
+												<el-row>
+													<el-button type="primary">使用</el-button>
+													<el-button type="success">预览</el-button>
+												</el-row>	
+											</div>	
+										</div>
+									</a>
+								</li>
+								<li class="zli-1">
+									<a href="#">
+										<img src="../imges/wangye7.png" alt="">
+										<div class="zli1-1">
+											<h1>三维设计平台网站模板</h1>
+											<div class="zli2-1">
+												<el-row>
+													<el-button type="primary">使用</el-button>
+													<el-button type="success">预览</el-button>
+												</el-row>	
+											</div>	
+										</div>
+									</a>
+								</li>
+								<li class="zli-1">
+									<a href="#">
+										<img src="../imges/wangye8.png" alt="">
+										<div class="zli1-1">
+											<h1>三维设计平台网站模板</h1>
+											<div class="zli2-1">
+												<el-row>
+													<el-button type="primary">使用</el-button>
+													<el-button type="success">预览</el-button>
+												</el-row>	
+											</div>	
+										</div>
+									</a>
+								</li>
+								
+							</ul>
+						</el-tab-pane>
+						<el-tab-pane label="App">配置管理</el-tab-pane>
+						<el-tab-pane label="商铺">角色管理</el-tab-pane>
+						<el-tab-pane label="个人">定时任务补偿</el-tab-pane>
+						<el-tab-pane label="H5网页">定时任务补偿</el-tab-pane>
+						<el-tab-pane label="网页首页">定时任务补偿</el-tab-pane>
+						<el-tab-pane label="节日设计">定时任务补偿</el-tab-pane>
+					</el-tabs>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -232,6 +292,7 @@
 export default {
   name: 'index',
   props: {},
+	// 页码
 	methods: {
 		handleSizeChange(val) {
 			console.log(`每页 ${val} 条`);
@@ -242,13 +303,17 @@ export default {
     },
 	data(){
 		return {
+			// 图片轮播
 			imagesbox:[
 				{id:0,idView:require("../imges/lun1.jpg")},
 				{id:1,idView:require("../imges/lun2.jpg")},
 				{id:2,idView:require("../imges/lun3.jpg")},
 				{id:3,idView:require("../imges/lun4.jpg")},
 			],
-			currentPage3: 1,	
+			// 页码
+			currentPage3: 1,
+			// 选项卡
+			tabPosition: 'left',
 		}
 	}
 }
@@ -414,6 +479,16 @@ a{
 	text-align: center;
 	line-height: 100px;
 }
+.cakan{
+	text-align: right;
+	margin-top: -28px;
+	float: right;
+	margin-right: 220px;
+	color: darkgray;
+}
+.cakan:hover{
+	color: #000;
+}
 .tou3-2 li{
 	width: 340px;
 	height: 400px;
@@ -485,7 +560,7 @@ a{
 	overflow: hidden;
 	text-align: center;
 }
-// 征师令
+// 更多精品
 .tou5{
 	width: 100%;
 }
@@ -493,4 +568,46 @@ a{
 	width: @kuan;
 	margin: 0 auto;
 }
+.tou5-2{
+	box-shadow: 0 0 10px #f00;
+	border-radius: 8px;
+}
+.tou5-3 li{
+	width: 952px;
+	margin-left:70px; 
+	position: relative;
+	margin-top: 30px;
+	border-radius: 8px;
+}
+.tou5-3 li img{
+	width: 952px;
+	height: 426px;
+	border-radius: 8px;
+}
+.zli1-1{
+	width: 952px;
+	height: 426px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #fff;
+	background:rgba(0, 0, 0 ,0.6);
+	display: none;
+}
+.tou5-3 li:hover .zli1-1{
+	display: block;
+}
+.zli1-1 h1{
+	height: 350px;
+	text-align: center;
+	line-height: 350px;
+}
+.zli2-1{
+	width: 190px;
+	margin: 0 auto;
+}
+.zli2-1 button:nth-child(2){
+	margin-left: 40px;
+}
+
 </style>
