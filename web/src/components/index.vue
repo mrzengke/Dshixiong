@@ -569,6 +569,55 @@
 				</div>
 			</div>
 		</div>
+		<!-- 为什么选择我们 -->
+		<div class="tou6">
+			<div class="tou6-1">
+				<h1><a href="#">— 为什么选择我们 —</a></h1>
+				<ul class="tou6-2">
+					<li>
+						<div>
+							<img src="../imges/tubiao1.png" alt="">
+						</div>
+						<p>成本低</p>
+						<p>成本节约95%以上</p>
+						<p>大众价格尊享订制级品质</p>
+					</li>
+					<li>
+						<div>
+							<img src="../imges/tubiao2.png" alt="">
+						</div>
+						<p>上线快</p>
+						<p>零门槛5分钟快速制作</p>
+						<p>快速上线，抢占市场先机</p>
+					</li>
+					<li>
+						<div>
+							<img src="../imges/tubiao3.png" alt="">
+						</div>
+						<p>功能完备</p>
+						<p>上百个功能行业</p>
+						<p>满足日常App开发需求</p>
+					</li>
+					<li>
+						<div>
+							<img src="../imges/tubiao4.png" alt="">
+						</div>
+						<p>安全稳定</p>
+						<p>大数据平台运营</p>
+						<p>阿里云战略合作全球护航</p>
+					</li>
+					<li>
+						<div>
+							<img src="../imges/tubiao5.png" alt="">
+						</div>
+						<p>服务保障</p>
+						<p>贴心服务，跟踪指导</p>
+						<p>1v1专属客户经理及时响应</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
 	</div>
 </template>
 
@@ -956,5 +1005,50 @@ a{
 .shang button{
 	margin-left: 50px;
 	margin-top: 5px;
+}
+// 为什么选择我们
+.tou6{
+	width: 100%;
+}
+.tou6-1{
+	width: @kuan;
+	margin: 0 auto;
+}
+.tou6-1 h1{
+	text-align: center;
+	height: 100px;
+	line-height: 100px;
+}
+.tou6-2{
+	box-shadow: 0 0 10px #f00;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.tou6-2 li{
+	width: 200px;
+	height: 200px;
+	float: left;
+	margin-left: 33px;
+}
+.tou6-2 li div{
+	width: 200px;
+	margin-top:10px;
+}
+.tou6-2 li div img{
+	width: 90px;
+	height: 90px;
+	margin: 0 auto;
+	display: block;
+}
+.tou6-2 li p{
+	text-align: center;
+}
+.tou6-2 li p:nth-of-type(1){
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.tou6-2 li p:nth-of-type(2),.tou6-2 li p:nth-of-type(3){
+	color: #999999;
+	font-size: 15px;
 }
 </style>
