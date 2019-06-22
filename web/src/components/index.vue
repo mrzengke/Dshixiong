@@ -1170,12 +1170,14 @@ a{
 .tou7-3{
 	overflow: hidden;
 	border-bottom:1px solid #7d7d7d; 
+	height: 145px;
 }
 .tou7-3 li{
 	float: left;
 	width: 200px;
 	height: 100px;
 	margin-left: 34px;
+	margin-top: 22px;
 }
 .tou7-3 li i{
 	width: 55px;
@@ -1203,10 +1205,13 @@ a{
 .tou7-4,.tou7-6 ul{
 	overflow: hidden;
 }
+.tou7-4{
+	height: 200px;
+}
 .tou7-5{
 	width: 200px;
 	height: 110px;
-	margin-top: 30px;
+	margin-top: 55px;
 	float: left;
 }
 .tou7-5 img{
@@ -1215,7 +1220,7 @@ a{
 }
 .tou7-6{
 	float: right;
-	margin-top: 40px;
+	margin-top: 70px;
 }
 .tou7-6 ul li{
 	width: 120px;
@@ -1223,6 +1228,7 @@ a{
 	color: #7d7d7d;
 	text-align: center;
 	border-right: 1px solid #7d7d7d;
+	font-size:15px;
 }
 .tou7-6 ul li:nth-of-type(1),.tou7-6 ul li:nth-of-type(6){
 	border: none;
