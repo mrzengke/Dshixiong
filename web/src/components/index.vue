@@ -673,6 +673,16 @@
 				</div>
 			</div>
 		</div>
+		<!-- 顶部滑动滚轮出现部分 -->
+		<div class="tou8">
+			<div class="tou8-1">
+				<img src="../imges/log.png" alt="">
+				<div class="inp">
+					<input type="text" v-model="input" placeholder="请输入内容">
+					<button class="el-icon-search"></button>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -687,7 +697,7 @@ export default {
 		},
 		handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
-      }
+			},
     },
 	data(){
 		return {
@@ -706,6 +716,17 @@ export default {
 			input: '',
 		}
 	}
+}
+// 顶部滑动滚轮出现部分
+window.onscroll=function(){
+    var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+		var top = document.getElementsByClassName("tou8")[0];
+    if(scrollTop>=600){
+      top.style.cssText="	transition:height 1s;height:80px";
+    }
+		if(scrollTop<=600){
+			top.style.cssText="transition:height 1s;height:0px";
+		}
 }
 </script>
 
@@ -1224,5 +1245,31 @@ a{
 }
 .tou7-7 p:nth-of-type(2) i{
 	background: url(../imges/govemblem.png) 0px 0px no-repeat;
+}
+// 顶部定位滚轮滚动
+.tou8{
+	width: 100%;
+	box-shadow: 0 0 10px #f00;
+	overflow: hidden;
+	position:fixed;
+	top: 0;
+	background: rgb(240, 243, 239);
+	overflow: hidden;
+	height: 0px;
+	z-index: 1111111;
+}
+.tou8-1{
+	width: 645px;
+	margin: 0 auto;
+}
+.tou8-1 img{
+	float: left;
+	width: 60px;
+	height: 55px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.tou8-1 .inp{
+	margin-left: 50px;
 }
 </style>
