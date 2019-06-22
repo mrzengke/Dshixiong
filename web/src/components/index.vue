@@ -42,6 +42,10 @@
 		<div class="tou">
 			<div class="tou1">
 				<div class="tou1-1"><img src="../imges/log.png" alt=""></div>
+				<div class="inp">
+					<input type="text" v-model="input" placeholder="请输入内容">
+					<button class="el-icon-search"></button>
+				</div>
 				<ul class="tou1-2">
 					<li>首页</li>
 					<li>商城</li>
@@ -698,6 +702,8 @@ export default {
 			currentPage3: 1,
 			// 选项卡
 			tabPosition: 'left',
+			// input搜索框
+			input: '',
 		}
 	}
 }
@@ -767,11 +773,37 @@ a{
 	width: 250px;
 	height: 120px;
 }
+// 搜索框
+.inp{
+	width: 500px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 180px;
+}
+.inp input{
+	width: 420px;
+	float: left;
+	padding-left: 20px;
+	height: 40px;
+	border: 1px solid @yanse;
+	border-radius: 8px 0px 0px 8px;
+}
+.inp button{
+	width: 50px;
+	height: 42px;
+	float: left;
+	background: @yanse;
+	border: 1px solid @yanse;
+	border-radius:0px 8px 8px 0px;
+	font-size: 25px;
+	color: #fff;
+	outline: none; 
+}
 // 导航条
 .tou1-2{
 	width: 800px;
 	float: right;
-	margin-top:90px; 
+	margin-top:20px; 
 	margin-right: 100px;
 	// box-shadow: 0 0 10px #f00;
 	height: 44px;
@@ -970,17 +1002,18 @@ a{
 }
 .zli1-1{
 	width: 952px;
-	height: 426px;
+	height: 0px;
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	color: #fff;
 	background:rgba(0, 0, 0 ,0.6);
-	display: none;
 	border-radius: 8px;
+	transition: height 0.5s;
+	overflow: hidden;
 }
 .tou5-3 li:hover .zli1-1{
-	display: block;
+	height: 426px;
 }
 .zli1-1 h1{
 	height: 350px;
