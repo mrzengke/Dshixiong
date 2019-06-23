@@ -1,70 +1,5 @@
 <template>
-  <div style="background:#f0f3ef;">
-		<!-- 顶部定位部分 -->
-		<div class="ding">
-			<div class="ding1">
-				<div class="ding2">
-					<span>你好，请登录</span>
-					<span>免费注册</span>
-				</div>
-				<ul class="ding3">
-					<li>我的订单</li>
-					<li>
-						<el-dropdown size="mini" split-button type="primary">
-							我的大师兄
-							<el-dropdown-menu slot="dropdown">
-								<el-dropdown-item>待处理订单</el-dropdown-item>
-								<el-dropdown-item>消息</el-dropdown-item>
-								<el-dropdown-item>我的关注</el-dropdown-item>
-								<el-dropdown-item>我的回答</el-dropdown-item>
-								<el-dropdown-item>我的D豆</el-dropdown-item>
-							</el-dropdown-menu>
-						</el-dropdown>
-					</li>
-					<li>D会员</li>
-					<li>
-						<el-dropdown size="mini" split-button type="primary">
-							客户服务
-							<el-dropdown-menu slot="dropdown">
-								<el-dropdown-item>在线客服</el-dropdown-item>
-								<el-dropdown-item>电话客服</el-dropdown-item>
-								<el-dropdown-item>意见建议</el-dropdown-item>
-								<el-dropdown-item>客服邮箱</el-dropdown-item>
-								<el-dropdown-item>帮助中心</el-dropdown-item>
-							</el-dropdown-menu>
-						</el-dropdown>
-					</li>
-					<li>大师兄App</li>
-				</ul>
-			</div>
-		</div>
-		<!-- 头部部分 -->
-		<div class="tou">
-			<div class="tou1">
-				<div class="tou1-1"><img src="../imges/log.png" alt=""></div>
-				<div class="inp">
-					<input type="text" v-model="input" placeholder="请输入内容">
-					<button class="el-icon-search"></button>
-				</div>
-				<ul class="tou1-2">
-					<li>首页</li>
-					<li>商城</li>
-					<li>关于我们</li>
-					<li>更多精品</li>
-						<el-dropdown>
-							<el-button type="primary">
-								入口<i class="el-icon-arrow-down el-icon--right"></i>
-							</el-button>
-							<el-dropdown-menu slot="dropdown">
-								<el-dropdown-item>学生</el-dropdown-item>
-								<el-dropdown-item>商家</el-dropdown-item>
-								<el-dropdown-item>个人</el-dropdown-item>
-								<el-dropdown-item>企业</el-dropdown-item>
-							</el-dropdown-menu>
-						</el-dropdown>
-				</ul>
-			</div>
-		</div>
+  <div style="background:#f0f3ef;" class="div1">
 		<!-- 中间轮播大部分 -->
 		<!-- 左边导航条部分 -->
 		<div class="tou2">
@@ -621,68 +556,6 @@
 				</ul>
 			</div>
 		</div>
-		<!-- 底部 -->
-		<div class="tou7">
-			<div class="tou7-1">
-				<div class="tou7-2">
-					<ul class="tou7-3">
-						<li>
-							<i class="el-icon-time"></i>
-							<p>7*24</p>
-							<p>多渠道服务支持</p>
-						</li>
-						<li>
-							<i class="el-icon-document-delete"></i>
-							<p>3天</p>
-							<p>内无理由退订</p>
-						</li>
-						<li>
-							<i class="el-icon-s-check"></i>
-							<p>0元</p>
-							<p>免费备案</p>
-						</li>
-						<li>
-							<i class="el-icon-edit-outline"></i>
-							<p>意见</p>
-							<p>反馈与投诉建议</p>
-						</li>
-						<li>
-							<i class="el-icon-medal-1"></i>
-							<p>专业服务</p>
-							<p>业务全流程支持</p>
-						</li>
-					</ul>
-					<div class="tou7-4">
-						<div class="tou7-5"><img src="../imges/log1.png" alt=""></div>
-						<div class="tou7-6">
-							<ul>
-								<li>大师兄</li>
-								<li>关于我们</li>
-								<li>用户协议</li>
-								<li>版权声明</li>
-								<li>售后服务</li>
-								<li>入驻签约</li>
-							</ul>
-							<div class="tou7-7">
-								<p><i></i>川 | CP备88888888号</p>
-								<p><i></i>川公网安备 31011124888888号</p>
-								<p>大师兄-Copyright © 2019 版权所有</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- 顶部滑动滚轮出现部分 -->
-		<div class="tou8">
-			<div class="tou8-1">
-				<img src="../imges/log.png" alt="">
-				<div class="inp">
-					<input type="text" v-model="input" placeholder="请输入内容">
-					<button class="el-icon-search"></button>
-				</div>
-			</div>
-		</div>
 	</div>
 </template>
 
@@ -712,141 +585,20 @@ export default {
 			currentPage3: 1,
 			// 选项卡
 			tabPosition: 'left',
-			// input搜索框
-			input: '',
 		}
 	}
-}
-// 顶部滑动滚轮出现部分
-window.onscroll=function(){
-    var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
-		var top = document.getElementsByClassName("tou8")[0];
-    if(scrollTop>=600){
-      top.style.cssText="	transition:height 1s;height:80px";
-    }
-		if(scrollTop<=600){
-			top.style.cssText="transition:height 1s;height:0px";
-		}
 }
 </script>
 
 <style scoped lang="less">
 	@kuan:1200px;
 	@yanse:#409EFF;
-// 头部定位部分
 a{
 	color: #000;
 }
-.ding{
+.div1{
 	width: 100%;
-	background: @yanse;
-	height: 50px;
-	color: #fff;
-	font-size: 14px;
-	// position: fixed;
-	// top: 0;
-}
-.ding1{
-	width: 1000px;
-	margin: 0 auto;
-	line-height: 50px;
-}
-.ding2{
-	margin-left: 170px;
-	float: left;
-}
-.ding2 span{
-	margin-right:10px; 
-}
-.ding2 span:nth-of-type(2){
-	color: red;
-}
-.ding3{
-	width: 600px;
-	float: left;
-	margin-left: 20px;
-}
-.ding3 li{
-	float: left;
-	margin-left: 20px;
-}
-// 头部部分
-// log部分
-.tou{
-	width: 100%;
-}
-.tou1{
-	width: @kuan;
-	margin: 0 auto;
-	height: 140px; 
 	min-width: 1400px;
-	// box-shadow: 0 0 10px #f00;
-	margin-bottom: 10px;
-}
-.tou1 .tou1-1{
-	width: 250px;
-	height: 130px;
-	margin-left:130px; 
-	margin-top: 5px;
-	float: left;
-}
-.tou1-1 img{
-	width: 250px;
-	height: 120px;
-}
-// 搜索框
-.inp{
-	width: 500px;
-	float: left;
-	margin-top: 20px;
-	margin-left: 180px;
-}
-.inp input{
-	width: 420px;
-	float: left;
-	padding-left: 20px;
-	height: 40px;
-	border: 1px solid @yanse;
-	border-radius: 8px 0px 0px 8px;
-}
-.inp button{
-	width: 50px;
-	height: 42px;
-	float: left;
-	background: @yanse;
-	border: 1px solid @yanse;
-	border-radius:0px 8px 8px 0px;
-	font-size: 25px;
-	color: #fff;
-	outline: none; 
-}
-// 导航条
-.tou1-2{
-	width: 800px;
-	float: right;
-	margin-top:20px; 
-	margin-right: 100px;
-	// box-shadow: 0 0 10px #f00;
-	height: 44px;
-	line-height: 40px;
-}
-.tou1-2 li{
-	float: left;
-	width: 150px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-}
-.tou1-2 li:nth-of-type(4){
-	margin-right: 30px;
-}
-.tou1-2 li:hover{
-	background: @yanse;
-	border-radius:4px;
-	color: #fff;
-}
-.el-button{
-	text-align: center;
 }
 // 中间轮播大部分
 .tou2{
@@ -1115,7 +867,7 @@ a{
 // 为什么选择我们
 .tou6{
 	width: 100%;
-	margin-bottom:20px; 
+	padding-bottom:20px; 
 }
 .tou6-1{
 	width: @kuan;
@@ -1157,125 +909,5 @@ a{
 .tou6-2 li p:nth-of-type(2),.tou6-2 li p:nth-of-type(3){
 	color: #999999;
 	font-size: 15px;
-}
-// 底部
-.tou7{
-	width: 100%;
-	background: #000;
-}
-.tou7-1{
-	width: @kuan;
-	margin: 0 auto;
-}
-.tou7-3{
-	overflow: hidden;
-	border-bottom:1px solid #7d7d7d; 
-	height: 145px;
-}
-.tou7-3 li{
-	float: left;
-	width: 200px;
-	height: 100px;
-	margin-left: 34px;
-	margin-top: 22px;
-}
-.tou7-3 li i{
-	width: 55px;
-	height: 55px;
-	font-size: 55px;
-	color: rgba(255, 255, 255, 0.7);
-	margin-top: 25px;
-	float: left;
-}
-.tou7-3 li p{
-	float: left;
-	margin-left: 10px;
-}
-.tou7-3 li p:nth-of-type(1){
-	font-size: 18px;
-	color: #fff;
-	margin-top: 30px;
-	font-weight: bold;
-	width: 110px;
-}
-.tou7-3 li p:nth-of-type(2){
-	font-size: 15px;
-	color: rgba(255, 255, 255, 0.7);
-}
-.tou7-4,.tou7-6 ul{
-	overflow: hidden;
-}
-.tou7-4{
-	height: 200px;
-}
-.tou7-5{
-	width: 200px;
-	height: 110px;
-	margin-top: 55px;
-	float: left;
-}
-.tou7-5 img{
-	width: 200px;
-	height: 100px;
-}
-.tou7-6{
-	float: right;
-	margin-top: 70px;
-}
-.tou7-6 ul li{
-	width: 120px;
-	float: left;
-	color: #7d7d7d;
-	text-align: center;
-	border-right: 1px solid #7d7d7d;
-	font-size:15px;
-}
-.tou7-6 ul li:nth-of-type(1),.tou7-6 ul li:nth-of-type(6){
-	border: none;
-}
-.tou7-7 p{
-	color: #7d7d7d;
-	float: left;
-	margin-left: 30px;
-	margin-top: 30px;
-	font-size: 14px;
-}
-.tou7-7 p i{
-	display: block;
-	width: 15px;
-	height: 20px;
-	float: left;
-	margin-right: 5px;
-	margin-top: 2px;
-	background: url(../imges/govemblem.png) -15px 0px no-repeat;
-}
-.tou7-7 p:nth-of-type(2) i{
-	background: url(../imges/govemblem.png) 0px 0px no-repeat;
-}
-// 顶部定位滚轮滚动
-.tou8{
-	width: 100%;
-	box-shadow: 0 0 10px #f00;
-	overflow: hidden;
-	position:fixed;
-	top: 0;
-	background: rgb(240, 243, 239);
-	overflow: hidden;
-	height: 0px;
-	z-index: 1111111;
-}
-.tou8-1{
-	width: 645px;
-	margin: 0 auto;
-}
-.tou8-1 img{
-	float: left;
-	width: 60px;
-	height: 55px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.tou8-1 .inp{
-	margin-left: 50px;
 }
 </style>

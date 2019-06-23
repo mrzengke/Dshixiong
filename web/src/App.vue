@@ -1,9 +1,14 @@
 <template>
- <MyIndex></MyIndex>
+	<div>
+		<MyTou></MyTou>
+		<MyIndex></MyIndex>
+		<MyDi></MyDi>
+	</div>
+
+
 </template>
 
 <script>
-
 export default {
   name: 'app',
   components: {
