@@ -58,7 +58,7 @@
 				</div>
 				<ul class="tou1-2">
 					<li>首页</li>
-					<li>商城</li>
+					<li><router-link tag="a" to="/shangc">商城</router-link></li>
 					<li>关于我们</li>
 					<li>更多精品</li>
 					<el-dropdown>
@@ -80,7 +80,7 @@
 
 <script>
 export default {
-  name: 'index',
+  name: 'toubu',
   props: {},
 	data(){
 		return {

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from './components/index'
+import shangc from './components/shangc'
+import MyHtml from './components/MyHtml'
 
 Vue.use(Router)
 
@@ -8,10 +9,19 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: index
-    },
+	{
+	  path: '/',
+	  name: 'MyHtml',
+	  component: MyHtml
+	},
+	{
+	  path: '/shangc',
+	  name: 'shangc',
+	  component: shangc
+	},
+	{
+	  path:'*',
+	  redirect:'/'
+	}
    ],
 })

@@ -10,9 +10,9 @@ import './plugins/element.js'
 
 Vue.config.productionTip = false
 
-Vue.component('MyTou',MyTou);
+ Vue.component('MyTou',MyTou);//头部全局组件
 Vue.component('MyIndex',MyIndex);
-Vue.component('MyDi',MyDi);
+Vue.component('MyDi',MyDi);//底部全局组件
 
 
 new Vue({
