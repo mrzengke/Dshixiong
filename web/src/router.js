@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import shangc from './components/shangc'
 import xiangq from './components/xiangq'
+import gouwuc from './components/gouwuc'
 import MyHtml from './components/MyHtml'
 
 Vue.use(Router)
@@ -24,6 +25,11 @@ export default new Router({
 	  path: '/xiangq',
 	  name: 'xiangq',
 	  component: xiangq
+	},
+	{
+	  path: '/gouwuc',
+	  name: 'gouwuc',
+	  component: gouwuc
 	},
 	{
 	  path:'*',

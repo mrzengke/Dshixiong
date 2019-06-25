@@ -34,7 +34,7 @@
 							<div class="stou2-5">
 								<div class="sbao">
 									<button><i class="el-icon-download"></i>立即下载</button>
-									<button><i class="el-icon-shopping-cart-1"></i>加入购物车</button>
+									<button><router-link tag="a" to="/gouwuc"><i class="el-icon-shopping-cart-1"></i>加入购物车</router-link></button>
 								</div>
 							</div>
 						</li>
@@ -2579,6 +2579,9 @@ a{
 }
 .stou2-5 button:nth-of-type(2){
 	background: red;
+	color: #fff;
+}
+.stou2-5 button:nth-of-type(2) a{
 	color: #fff;
 }
 .stou2-5 button:nth-of-type(1):hover{

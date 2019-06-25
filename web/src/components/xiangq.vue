@@ -28,7 +28,7 @@
 					</div>
 					<div class="ztou2-4">
 						<button class="el-icon-download">立即下载</button>
-						<button class="el-icon-star-off"></button>
+						<button class="el-icon-star-off" title="加入购物车"></button>
 						<div class="ztou2-5">
 							<p>作者：三三</p>
 							<p>文件格式：.red</p>

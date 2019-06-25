@@ -50,7 +50,7 @@
 			</div>
 		</div>
 		<!-- 头部部分 -->
-		<div class="tou">
+		<div class="tou" v-if="$route.path!=='/gouwuc'">
 			<div class="tou1">
 				<div class="tou1-1"><img src="../imges/log.png" alt=""></div>
 				<div class="inp">
@@ -85,7 +85,7 @@ export default {
   props: {},
  	data(){
  		return {
-// 		input搜索框
+			//input搜索框
  			input: '',
  		}
  	}
