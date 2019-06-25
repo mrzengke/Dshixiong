@@ -37,7 +37,7 @@
 		<!-- 作品商城部分 -->
 		<div class="tou3">
 			<div class="tou3-1">
-				<h1><a href="#">— 网页模板 —</a></h1>
+				<h1><a href="javascript:void(null)">— 网页模板 —</a></h1>
 				<!-- 中间内容部分 -->
 				<ul class="tou3-2">
 					<li>
@@ -46,104 +46,114 @@
 						</div>
 					</li>
 					<li class="zli">
-						<a href="#">
-							<img src="../imges/wangye1.png" alt="">
-							<div class="zli1">
-								<p>三维设计平台网站模板</p>
-								<div class="zli2">
-									<el-row>
-										<el-button type="primary">使用</el-button>
-										<el-button type="success">预览</el-button>
-									</el-row>	
+						<router-link tag="a" to="/xiangq">
+							<a href="javascript:void(null)">
+								<img src="../imges/wangye1.png" alt="">
+								<div class="zli1">
+									<p>三维设计平台网站模板</p>
+									<div class="zli2">
+										<el-row>
+											<el-button type="primary">使用</el-button>
+											<el-button type="success">预览</el-button>
+										</el-row>	
+									</div>
 								</div>
-							</div>
-							<div class="zli3">
-								<i class="el-icon-shopping-cart-1"></i>
-								<i class="el-icon-download"></i>
-								<i class="el-icon-share"></i>
-								<i class="el-icon-star-off"></i>
-							</div>
-						</a>
+								<div class="zli3">
+									<i class="el-icon-shopping-cart-1"></i>
+									<i class="el-icon-download"></i>
+									<i class="el-icon-share"></i>
+									<i class="el-icon-star-off"></i>
+								</div>
+							</a>
+						</router-link>
 					</li>
 					<li class="zli">
-						<a href="#">
-							<img src="../imges/wangye2.png" alt="">
-							<div class="zli1">
-								<p>拖车救援服务公司模板</p>
-								<div class="zli2">
-									<el-row>
-										<el-button type="primary">使用</el-button>
-										<el-button type="success">预览</el-button>
-									</el-row>	
+						<router-link tag="a" to="/xiangq">
+							<a href="javascript:void(null)">
+								<img src="../imges/wangye2.png" alt="">
+								<div class="zli1">
+									<p>拖车救援公司服务网站模板</p>
+									<div class="zli2">
+										<el-row>
+											<el-button type="primary">使用</el-button>
+											<el-button type="success">预览</el-button>
+										</el-row>	
+									</div>
 								</div>
-							</div>
-							<div class="zli3">
-								<i class="el-icon-shopping-cart-1"></i>
-								<i class="el-icon-download"></i>
-								<i class="el-icon-share"></i>
-								<i class="el-icon-star-off"></i>
-							</div>
-						</a>
+								<div class="zli3">
+									<i class="el-icon-shopping-cart-1"></i>
+									<i class="el-icon-download"></i>
+									<i class="el-icon-share"></i>
+									<i class="el-icon-star-off"></i>
+								</div>
+							</a>
+						</router-link>
 					</li>
 					<li class="zli">
-						<a href="#">
-							<img src="../imges/wangye3.png" alt="">
-							<div class="zli1">
-								<p>灯具装饰公司网站模板</p>
-								<div class="zli2">
-									<el-row>
-										<el-button type="primary">使用</el-button>
-										<el-button type="success">预览</el-button>
-									</el-row>	
+						<router-link tag="a" to="/xiangq">
+							<a href="javascript:void(null)">
+								<img src="../imges/wangye3.png" alt="">
+								<div class="zli1">
+									<p>灯具装饰公司网站模板</p>
+									<div class="zli2">
+										<el-row>
+											<el-button type="primary">使用</el-button>
+											<el-button type="success">预览</el-button>
+										</el-row>	
+									</div>
 								</div>
-							</div>
-							<div class="zli3">
-								<i class="el-icon-shopping-cart-1"></i>
-								<i class="el-icon-download"></i>
-								<i class="el-icon-share"></i>
-								<i class="el-icon-star-off"></i>
-							</div>
-						</a>
+								<div class="zli3">
+									<i class="el-icon-shopping-cart-1"></i>
+									<i class="el-icon-download"></i>
+									<i class="el-icon-share"></i>
+									<i class="el-icon-star-off"></i>
+								</div>
+							</a>
+						</router-link>
 					</li>
 					<li class="zli">
-						<a href="#">
-							<img src="../imges/wangye4.png" alt="">
-							<div class="zli1">
-								<p>美发在线服务网站模板</p>
-								<div class="zli2">
-									<el-row>
-										<el-button type="primary">使用</el-button>
-										<el-button type="success">预览</el-button>
-									</el-row>	
+						<router-link tag="a" to="/xiangq">
+							<a href="javascript:void(null)">
+								<img src="../imges/wangye4.png" alt="">
+								<div class="zli1">
+									<p>美发在线服务网站模板</p>
+									<div class="zli2">
+										<el-row>
+											<el-button type="primary">使用</el-button>
+											<el-button type="success">预览</el-button>
+										</el-row>	
+									</div>
 								</div>
-							</div>
-							<div class="zli3">
-								<i class="el-icon-shopping-cart-1"></i>
-								<i class="el-icon-download"></i>
-								<i class="el-icon-share"></i>
-								<i class="el-icon-star-off"></i>
-							</div>
-						</a>
+								<div class="zli3">
+									<i class="el-icon-shopping-cart-1"></i>
+									<i class="el-icon-download"></i>
+									<i class="el-icon-share"></i>
+									<i class="el-icon-star-off"></i>
+								</div>
+							</a>
+						</router-link>
 					</li>
 					<li class="zli">
-						<a href="#">
-							<img src="../imges/wangye5.png" alt="">
-							<div class="zli1">
-								<p>精品卫浴商城网站模板</p>
-								<div class="zli2">
-									<el-row>
-										<el-button type="primary">使用</el-button>
-										<el-button type="success">预览</el-button>
-									</el-row>	
+						<router-link tag="a" to="/xiangq">
+							<a href="javascript:void(null)">
+								<img src="../imges/wangye5.png" alt="">
+								<div class="zli1">
+									<p>卫浴商铺网站模板</p>
+									<div class="zli2">
+										<el-row>
+											<el-button type="primary">使用</el-button>
+											<el-button type="success">预览</el-button>
+										</el-row>	
+									</div>
 								</div>
-							</div>
-							<div class="zli3">
-								<i class="el-icon-shopping-cart-1"></i>
-								<i class="el-icon-download"></i>
-								<i class="el-icon-share"></i>
-								<i class="el-icon-star-off"></i>
-							</div>
-						</a>
+								<div class="zli3">
+									<i class="el-icon-shopping-cart-1"></i>
+									<i class="el-icon-download"></i>
+									<i class="el-icon-share"></i>
+									<i class="el-icon-star-off"></i>
+								</div>
+							</a>
+						</router-link>
 					</li>
 				</ul>
 				<!-- 页码部分 -->
@@ -165,13 +175,13 @@
 		<!-- 更多精品 -->
 		<div class="tou5">
 			<div class="tou5-1">
-				<h1><a href="#">— 更多精品 —</a></h1>
+				<h1><a href="javascript:void(null)">— 更多精品 —</a></h1>
 				<div class="tou5-2">
 					<el-tabs :tab-position="tabPosition">
 						<el-tab-pane label="企业">
 							<ul class="tou5-3">
 								<li class="zli-1">
-									<a href="#">
+									<a href="javascript:void(null)">
 										<img src="../imges/wangye6.png" alt="">
 										<div class="zli1-1">
 											<h1>汽车维护保养公司网站模板</h1>
@@ -185,7 +195,7 @@
 									</a>
 								</li>
 								<li class="zli-1">
-									<a href="#">
+									<a href="javascript:void(null)">
 										<img src="../imges/wangye7.png" alt="">
 										<div class="zli1-1">
 											<h1>软件服务公司网站模板</h1>
@@ -199,7 +209,7 @@
 									</a>
 								</li>
 								<li class="zli-1">
-									<a href="#">
+									<a href="javascript:void(null)">
 										<img src="../imges/wangye8.png" alt="">
 										<div class="zli1-1">
 											<h1>房车旅行租赁公司网站模板</h1>
@@ -283,7 +293,7 @@
 						<el-tab-pane label="商铺">
 							<ul class="tou5-3">
 								<li class="zli-1">
-									<a href="#">
+									<a href="javascript:void(null)">
 										<img src="../imges/wangye15.png" alt="">
 										<div class="zli1-1">
 											<h1>雨伞阳伞商店网站模板</h1>
@@ -297,7 +307,7 @@
 									</a>
 								</li>
 								<li class="zli-1">
-									<a href="#">
+									<a href="javascript:void(null)">
 										<img src="../imges/wangye16.png" alt="">
 										<div class="zli1-1">
 											<h1>休闲食品商城网站模板</h1>
@@ -311,7 +321,7 @@
 									</a>
 								</li>
 								<li class="zli-1">
-									<a href="#">
+									<a href="javascript:void(null)">
 										<img src="../imges/wangye17.png" alt="">
 										<div class="zli1-1">
 											<h1>冰淇淋品牌网站模板</h1>
@@ -460,7 +470,7 @@
 						<el-tab-pane label="网站首页">
 							<ul class="tou5-3">
 								<li class="zli-1">
-									<a href="#">
+									<a href="javascript:void(null)">
 										<img src="../imges/wangye30.jpg" alt="">
 										<div class="zli1-1">
 											<h1>数码维修网站首页模板</h1>
@@ -474,7 +484,7 @@
 									</a>
 								</li>
 								<li class="zli-1">
-									<a href="#">
+									<a href="javascript:void(null)">
 										<img src="../imges/wangye31.jpg" alt="">
 										<div class="zli1-1">
 											<h1>公司首页网站模板</h1>
@@ -488,7 +498,7 @@
 									</a>
 								</li>
 								<li class="zli-1">
-									<a href="#">
+									<a href="javascript:void(null)">
 										<img src="../imges/wangye32.jpg" alt="">
 										<div class="zli1-1">
 											<h1>简约旅游网站首页模板</h1>
@@ -511,7 +521,7 @@
 		<!-- 为什么选择我们 -->
 		<div class="tou6">
 			<div class="tou6-1">
-				<h1><a href="#">— 为什么选择我们 —</a></h1>
+				<h1><a href="javascript:void(null)">— 为什么选择我们 —</a></h1>
 				<ul class="tou6-2">
 					<li>
 						<div>
@@ -595,6 +605,7 @@ export default {
 <style scoped lang="less">
 	@kuan:1200px;
 	@yanse:#409EFF;
+	@xkuan:1400px;
 a{
 	color: #000;
 }
@@ -602,7 +613,7 @@ a{
 // 中间轮播大部分
 .tou2{
 	width: 100%;
-	min-width: 1400px;
+	min-width: @xkuan;
 }
 .tou2-1{
 	width: @kuan;
@@ -658,7 +669,7 @@ a{
 // 商城作品部分
 .tou3{
 	width: 100%;
-	min-width: 1400px;
+	min-width: @xkuan;
 }
 .tou3-1{
 	width: @kuan;
@@ -753,7 +764,7 @@ a{
 // 更多精品
 .tou5{
 	width: 100%;
-	min-width: 1400px;
+	min-width: @xkuan;
 }
 .tou5-1{
 	width: @kuan;
@@ -808,7 +819,7 @@ a{
 }
 .tou5-4{
 	width: 952px;
-  margin: 0 auto;
+	margin: 0 auto;
 	line-height: 50px;
 	margin-top:10px; 
 	height: 50px;
@@ -873,7 +884,7 @@ a{
 // 为什么选择我们
 .tou6{
 	width: 100%;
-	min-width: 1400px;
+	min-width: @xkuan;
 	padding-bottom:20px; 
 }
 .tou6-1{
