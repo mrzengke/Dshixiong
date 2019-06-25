@@ -1,5 +1,5 @@
 <template>
-	<div style="background:#f0f3ef;">
+	<div style="background:#f0f3ef; width: 100%; min-width: 1400px;">
 		<!-- 中间轮播大部分 -->
 		<!-- 左边导航条部分 -->
 		<div class="tou2">
@@ -457,7 +457,7 @@
 							</ul>
 							<div class="tou5-4">查看更多</div>
 						</el-tab-pane>
-						<el-tab-pane label="网页首页">
+						<el-tab-pane label="网站首页">
 							<ul class="tou5-3">
 								<li class="zli-1">
 									<a href="#">
@@ -602,6 +602,7 @@ a{
 // 中间轮播大部分
 .tou2{
 	width: 100%;
+	min-width: 1400px;
 }
 .tou2-1{
 	width: @kuan;
@@ -609,18 +610,18 @@ a{
 }
 // 导航栏部分
 .el-aside {
-		border: 2px solid #fff;
-		box-shadow: 0 0 10px #f00;
+	border: 2px solid #fff;
+	box-shadow: 0 0 10px #f00;
     text-align: center;
     line-height: 40px;
-		border-radius: 8px;
+	border-radius: 8px;
 }
 .el-main {
-		border: 2px solid #fff;
-		box-shadow: 0 0 10px #f00;
+	border: 2px solid #fff;
+	box-shadow: 0 0 10px #f00;
     text-align: center;
     line-height: 20px;
-		border-radius: 8px;
+	border-radius: 8px;
 }
 // 轮播部分
 .el-carousel__item h3 {
@@ -643,7 +644,7 @@ a{
 // 左边按钮部分
 .el-button.is-round {
     margin-left: 10px;
-		margin-bottom: 13px;
+	margin-bottom: 13px;
 }
 .qt{
 	width: 300px;
@@ -657,6 +658,7 @@ a{
 // 商城作品部分
 .tou3{
 	width: 100%;
+	min-width: 1400px;
 }
 .tou3-1{
 	width: @kuan;
@@ -751,6 +753,7 @@ a{
 // 更多精品
 .tou5{
 	width: 100%;
+	min-width: 1400px;
 }
 .tou5-1{
 	width: @kuan;
@@ -759,6 +762,10 @@ a{
 .tou5-2{
 	box-shadow: 0 0 10px #f00;
 	border-radius: 8px;
+}
+.tou5-2 .el-tabs__item{
+	height: 100px;
+	line-height: 100px;
 }
 .tou5-3 li{
 	width: 952px;
@@ -866,6 +873,7 @@ a{
 // 为什么选择我们
 .tou6{
 	width: 100%;
+	min-width: 1400px;
 	padding-bottom:20px; 
 }
 .tou6-1{

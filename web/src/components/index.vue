@@ -1,5 +1,5 @@
 <template>
-  <div style="background:#f0f3ef;" class="div1">
+  <div style="background:#f0f3ef; width: 100%; min-width: 1400px;">
 		<!-- 头部 -->
 		<!-- 顶部滑动滚轮出现部分 -->
 		<div class="tou8">
@@ -58,10 +58,10 @@
 					<button class="el-icon-search"></button>
 				</div>
 				<ul class="tou1-2">
-					<li><router-link tag="a" to="/MyHtml">首页</router-link></li>
+					<li><router-link tag="a" to="/MyHtml" class="yangshi">首页</router-link></li>
 					<li><router-link tag="a" to="/shangc">商城</router-link></li>
-					<li>关于我们</li>
-					<li>更多精品</li>
+					<li><router-link tag="a" to="">关于我们</router-link></li>
+					<li><router-link tag="a" to="">更多精品</router-link></li>
 					<el-dropdown>
 						<el-button type="primary">
 							入口<i class="el-icon-arrow-down el-icon--right"></i>
@@ -101,17 +101,34 @@ window.onscroll=function(){
 			top.style.cssText="transition:height 1s;height:0px";
 		}
 }
+window.onload = function(){
+	let oUl = document.querySelector('.tou1-2')
+	let oLi = oUl.querySelectorAll('a');
+	// 添加点击事件
+	for(let i=0;i<oLi.length;i++){
+		oLi[i].index = i;
+		oLi[i].onclick = function(){
+			// 清除样式
+			for(let j=0;j<oLi.length;j++){
+				oLi[j].className = '';
+			}
+			this.className = 'yangshi';
+		};
+	}
+};
 </script>
 
 <style scoped lang="less">
 	@kuan:1200px;
 	@yanse:#409EFF;
+	@xkuan:1400px;
 a{
 	color: #000;
 }
 // 头部定位部分
 .ding{
 	width: 100%;
+	min-width: @xkuan;
 	background: @yanse;
 	height: 50px;
 	color: #fff;
@@ -147,14 +164,14 @@ a{
 // log部分
 .tou{
 	width: 100%;
-	min-width: 1400px;
+	min-width: @xkuan;
 	background:#f0f3ef;
 }
 .tou1{
 	width: @kuan;
 	margin: 0 auto;
 	height: 140px; 
-	min-width: 1400px;
+	min-width: @xkuan;
 	// box-shadow: 0 0 10px #f00;
 }
 .tou1 .tou1-1{
@@ -196,10 +213,10 @@ a{
 }
 // 导航条
 .tou1-2{
-	width: 800px;
-	float: right;
+	width: 900px;
+	float: left;
 	margin-top:20px; 
-	margin-right: 100px;
+	margin-left: 60px;
 	// box-shadow: 0 0 10px #f00;
 	height: 44px;
 	line-height: 40px;
@@ -210,15 +227,27 @@ a{
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
+	margin-left: 30px;
 }
-.tou1-2 li:nth-of-type(4){
-	margin-right: 30px;
+.tou1-2 li a{
+	width: 150px;
+	height: 40px;
+	display: block;
 }
-.tou1-2 li:hover{
+.yangshi{
 	background: @yanse;
 	border-radius:4px;
 	color: #fff;
 }
+.tou1-2 li:nth-of-type(4){
+	margin-right: 30px;
+}
+.tou1-2 li a:hover{
+	background: @yanse;
+	border-radius:4px;
+	color: #fff;
+}
+
 .el-button{
 	text-align: center;
 }
@@ -250,6 +279,6 @@ a{
 }
 .div1{
 	width: 100%;
-	min-width: 1400px;
+	min-width: @xkuan;
 }
 </style>
