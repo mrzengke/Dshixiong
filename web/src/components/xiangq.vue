@@ -14,12 +14,9 @@
 				<h3>三维设计平台模板</h3>
 				<div class="ztou2-2">
 					<div class="ztou2-3">
-						<img src="../imges/xiangq/1.png" alt="">
-						<img src="../imges/xiangq/2.png" alt="">
-						<img src="../imges/xiangq/3.png" alt="">
-						<img src="../imges/xiangq/4.png" alt="">
-						<img src="../imges/xiangq/5.png" alt="">
-						<img src="../imges/xiangq/6.png" alt="">
+						<div v-for="item in xiangq">
+							<img v-bind:src="item.img" alt="">
+						</div>
 						<div class="ztou3">
 							<p>模板水印：模板水印仅用于防盗防刷，无其他含义。</p>
 							<p>大师兄提供精美好看的网站模板下载，本次网站模板是有关网页设计，主题是UI设计高级西服定制web界面，格式是rap。</p>
@@ -30,10 +27,9 @@
 						<button class="el-icon-download">立即下载</button>
 						<button class="el-icon-star-off" title="加入购物车"></button>
 						<div class="ztou2-5">
-							<p>作者：三三</p>
-							<p>文件格式：.red</p>
-							<p>大小：10M</p>
-							<p>免费</p>
+							<span v-for="tiem in xiangq1">
+								<p>{{tiem.name}}</p>
+							</span>
 							<a href="javascript:void(null)" class="el-icon-warning-outline">侵权投诉</a>
 						</div>
 						<div class="ztou2-6">
@@ -44,10 +40,12 @@
 							<button class="el-icon-s-check">获取企业商用授权</button>
 						</div>
 						<div class="ztou2-7">
-							<span class="ztou2-8">
-								<img src="../imges/xiangq/touxiang.jpg" alt="">
+							<span class="ztou2-8" v-for="tiem in xiangq2">
+								<img v-bind:src="tiem.img" alt="">
 							</span>
-							<h3>三三</h3>
+							<span v-for="tiem in xiangq3">
+								<h3>{{tiem.name}}</h3>
+							</span>
 							<button class="el-icon-plus">关注</button>
 						</div>
 					</div>
@@ -56,9 +54,9 @@
 							<p>他的作品</p>
 							<a href="javascript:void(null)">更多 ></a>
 						</div>
-						<img src="../imges/xiangq/7.jpg" alt="">
-						<img src="../imges/xiangq/8.jpg" alt="">
-						<img src="../imges/xiangq/9.jpg" alt="">
+						<div v-for="tiem in xiangq4">
+							<img v-bind:src="tiem.img" alt="">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -68,6 +66,37 @@
 </template>
 
 <script>
+export default	{
+	data(){
+		return{
+			xiangq:[
+				{img:require('../imges/xiangq/1.png')},
+				{img:require('../imges/xiangq/2.png')},
+				{img:require('../imges/xiangq/3.png')},
+				{img:require('../imges/xiangq/4.png')},
+				{img:require('../imges/xiangq/5.png')},
+				{img:require('../imges/xiangq/6.png')},
+			],
+			xiangq1:[
+				{name:"作者：三三"},
+				{name:"文件格式：.red .zip"},
+				{name:"大小：10M"},
+				{name:"免费"},
+			],
+			xiangq2:[
+				{img:require('../imges/xiangq/touxiang.jpg')},
+			],
+			xiangq3:[
+				{name:"三三"},
+			],
+			xiangq4:[
+				{img:require("../imges/xiangq/7.jpg")},
+				{img:require("../imges/xiangq/8.jpg")},
+				{img:require("../imges/xiangq/9.jpg")},
+			]
+		}
+	}
+}	
 </script>
 
 <style scoped lang="less">

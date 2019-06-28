@@ -1,5 +1,5 @@
 <template>
-	<div style="background:#f0f3ef; width: 100%; min-width: 1400px;">
+	<div style="background:#f0f3ef; width: 100%; min-width: 1400px;" id="app">
 		<!-- 中间轮播大部分 -->
 		<!-- 左边导航条部分 -->
 		<div class="tou2">
@@ -45,12 +45,11 @@
 							<div class="tou3-4"><img src="../imges/muban.jpg" alt=""></div>
 						</div>
 					</li>
-					<li class="zli">
+					<li class="zli" v-for="item in abc">
 						<router-link tag="a" to="/xiangq">
-							<a href="javascript:void(null)">
-								<img src="../imges/wangye1.png" alt="">
+								<img v-bind:src="item.img"  alt="">
 								<div class="zli1">
-									<p>三维设计平台网站模板</p>
+									<p>{{item.name}}</p>
 									<div class="zli2">
 										<el-row>
 											<el-button type="primary">使用</el-button>
@@ -64,97 +63,9 @@
 									<i class="el-icon-share"></i>
 									<i class="el-icon-star-off"></i>
 								</div>
-							</a>
 						</router-link>
 					</li>
-					<li class="zli">
-						<router-link tag="a" to="/xiangq">
-							<a href="javascript:void(null)">
-								<img src="../imges/wangye2.png" alt="">
-								<div class="zli1">
-									<p>拖车救援公司服务网站模板</p>
-									<div class="zli2">
-										<el-row>
-											<el-button type="primary">使用</el-button>
-											<el-button type="success">预览</el-button>
-										</el-row>	
-									</div>
-								</div>
-								<div class="zli3">
-									<i class="el-icon-shopping-cart-1"></i>
-									<i class="el-icon-download"></i>
-									<i class="el-icon-share"></i>
-									<i class="el-icon-star-off"></i>
-								</div>
-							</a>
-						</router-link>
-					</li>
-					<li class="zli">
-						<router-link tag="a" to="/xiangq">
-							<a href="javascript:void(null)">
-								<img src="../imges/wangye3.png" alt="">
-								<div class="zli1">
-									<p>灯具装饰公司网站模板</p>
-									<div class="zli2">
-										<el-row>
-											<el-button type="primary">使用</el-button>
-											<el-button type="success">预览</el-button>
-										</el-row>	
-									</div>
-								</div>
-								<div class="zli3">
-									<i class="el-icon-shopping-cart-1"></i>
-									<i class="el-icon-download"></i>
-									<i class="el-icon-share"></i>
-									<i class="el-icon-star-off"></i>
-								</div>
-							</a>
-						</router-link>
-					</li>
-					<li class="zli">
-						<router-link tag="a" to="/xiangq">
-							<a href="javascript:void(null)">
-								<img src="../imges/wangye4.png" alt="">
-								<div class="zli1">
-									<p>美发在线服务网站模板</p>
-									<div class="zli2">
-										<el-row>
-											<el-button type="primary">使用</el-button>
-											<el-button type="success">预览</el-button>
-										</el-row>	
-									</div>
-								</div>
-								<div class="zli3">
-									<i class="el-icon-shopping-cart-1"></i>
-									<i class="el-icon-download"></i>
-									<i class="el-icon-share"></i>
-									<i class="el-icon-star-off"></i>
-								</div>
-							</a>
-						</router-link>
-					</li>
-					<li class="zli">
-						<router-link tag="a" to="/xiangq">
-							<a href="javascript:void(null)">
-								<img src="../imges/wangye5.png" alt="">
-								<div class="zli1">
-									<p>卫浴商铺网站模板</p>
-									<div class="zli2">
-										<el-row>
-											<el-button type="primary">使用</el-button>
-											<el-button type="success">预览</el-button>
-										</el-row>	
-									</div>
-								</div>
-								<div class="zli3">
-									<i class="el-icon-shopping-cart-1"></i>
-									<i class="el-icon-download"></i>
-									<i class="el-icon-share"></i>
-									<i class="el-icon-star-off"></i>
-								</div>
-							</a>
-						</router-link>
-					</li>
+					
 				</ul>
 				<!-- 页码部分 -->
 				<div class="tou4">
@@ -180,107 +91,27 @@
 					<el-tabs :tab-position="tabPosition">
 						<el-tab-pane label="企业">
 							<ul class="tou5-3">
-								<li class="zli-1">
-									<a href="javascript:void(null)">
-										<img src="../imges/wangye6.png" alt="">
-										<div class="zli1-1">
-											<h1>汽车维护保养公司网站模板</h1>
-											<div class="zli2-1">
-												<el-row>
-													<el-button type="primary">使用</el-button>
-													<el-button type="success">预览</el-button>
-												</el-row>	
-											</div>	
-										</div>
-									</a>
-								</li>
-								<li class="zli-1">
-									<a href="javascript:void(null)">
-										<img src="../imges/wangye7.png" alt="">
-										<div class="zli1-1">
-											<h1>软件服务公司网站模板</h1>
-											<div class="zli2-1">
-												<el-row>
-													<el-button type="primary">使用</el-button>
-													<el-button type="success">预览</el-button>
-												</el-row>	
-											</div>	
-										</div>
-									</a>
-								</li>
-								<li class="zli-1">
-									<a href="javascript:void(null)">
-										<img src="../imges/wangye8.png" alt="">
-										<div class="zli1-1">
-											<h1>房车旅行租赁公司网站模板</h1>
-											<div class="zli2-1">
-												<el-row>
-													<el-button type="primary">使用</el-button>
-													<el-button type="success">预览</el-button>
-												</el-row>	
-											</div>	
-										</div>
-									</a>
+								<li class="zli-1" v-for="item in jinp">
+									<img v-bind:src="item.img" alt="">
+									<div class="zli1-1">
+										<h1>{{item.name}}</h1>
+										<div class="zli2-1">
+											<el-row>
+												<el-button type="primary">使用</el-button>
+												<el-button type="success">预览</el-button>
+											</el-row>	
+										</div>	
+									</div>
 								</li>
 								<div class="tou5-4">查看更多</div>
 							</ul>
 						</el-tab-pane>
 						<el-tab-pane label="App">
 							<ul class="tou5-5">
-								<li>
-									<img src="../imges/wangye9.jpg" alt="">
+								<li v-for="item in jinp1">
+									<img v-bind:src="item.img1" alt="">
 									<div class="zhez">
-										<p>外卖App开发模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye10.jpg" alt="">
-									<div class="zhez">
-										<p>生活服务App开发模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye11.jpg" alt="">
-									<div class="zhez">
-										<p>外卖App开发模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye12.jpg" alt="">
-									<div class="zhez">
-										<p>外卖App开发模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye13.jpg" alt="">
-									<div class="zhez">
-										<p>婚庆App开发模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye14.jpg" alt="">
-									<div class="zhez">
-										<p>母婴App开发模板</p>
+										<p>{{item.name1}}</p>
 									</div>
 									<div class="shang">
 										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
@@ -292,107 +123,27 @@
 						</el-tab-pane>
 						<el-tab-pane label="商铺">
 							<ul class="tou5-3">
-								<li class="zli-1">
-									<a href="javascript:void(null)">
-										<img src="../imges/wangye15.png" alt="">
-										<div class="zli1-1">
-											<h1>雨伞阳伞商店网站模板</h1>
-											<div class="zli2-1">
-												<el-row>
-													<el-button type="primary">使用</el-button>
-													<el-button type="success">预览</el-button>
-												</el-row>	
-											</div>	
-										</div>
-									</a>
-								</li>
-								<li class="zli-1">
-									<a href="javascript:void(null)">
-										<img src="../imges/wangye16.png" alt="">
-										<div class="zli1-1">
-											<h1>休闲食品商城网站模板</h1>
-											<div class="zli2-1">
-												<el-row>
-													<el-button type="primary">使用</el-button>
-													<el-button type="success">预览</el-button>
-												</el-row>	
-											</div>	
-										</div>
-									</a>
-								</li>
-								<li class="zli-1">
-									<a href="javascript:void(null)">
-										<img src="../imges/wangye17.png" alt="">
-										<div class="zli1-1">
-											<h1>冰淇淋品牌网站模板</h1>
-											<div class="zli2-1">
-												<el-row>
-													<el-button type="primary">使用</el-button>
-													<el-button type="success">预览</el-button>
-												</el-row>	
-											</div>	
-										</div>
-									</a>
+								<li class="zli-1" v-for="item in jinp2">
+									<img v-bind:src="item.img2" alt="">
+									<div class="zli1-1">
+										<h1>{{item.name2}}</h1>
+										<div class="zli2-1">
+											<el-row>
+												<el-button type="primary">使用</el-button>
+												<el-button type="success">预览</el-button>
+											</el-row>	
+										</div>	
+									</div>
 								</li>
 								<div class="tou5-4">查看更多</div>
 							</ul>
 						</el-tab-pane>
 						<el-tab-pane label="个人">
 							<ul class="tou5-5">
-								<li>
-									<img src="../imges/wangye18.jpg" alt="">
+								<li v-for="item in jinp3">
+									<img v-bind:src="item.img3" alt="">
 									<div class="zhez">
-										<p>网格布局网站模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye19.jpg" alt="">
-									<div class="zhez">
-										<p>生活记录博客网站模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye20.jpg" alt="">
-									<div class="zhez">
-										<p>全屏音乐个人网站模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye21.jpg" alt="">
-									<div class="zhez">
-										<p>黑色背景设计师个人网站模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye22.jpg" alt="">
-									<div class="zhez">
-										<p>创意相册图片个人网站模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye23.jpg" alt="">
-									<div class="zhez">
-										<p>个人博客首页网站模板</p>
+										<p>{{item.name3}}</p>
 									</div>
 									<div class="shang">
 										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
@@ -404,60 +155,10 @@
 						</el-tab-pane>
 						<el-tab-pane label="H5网页">
 							<ul class="tou5-5">
-								<li>
-									<img src="../imges/wangye24.jpg" alt="">
+								<li v-for="item in jinp4">
+									<img v-bind:src="item.img4" alt="">
 									<div class="zhez">
-										<p>企业旅游网站模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye25.jpg" alt="">
-									<div class="zhez">
-										<p>企业网站建设网站模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye26.jpg" alt="">
-									<div class="zhez">
-										<p>唯美婚礼钻石珠宝首饰网站模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye27.jpg" alt="">
-									<div class="zhez">
-										<p>国外企业科技商务电子网站模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye28.jpg" alt="">
-									<div class="zhez">
-										<p>虚拟币与字母H2.5D网站模板</p>
-									</div>
-									<div class="shang">
-										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
-										<el-button type="danger" round>立即下载</el-button>
-									</div>
-								</li>
-								<li>
-									<img src="../imges/wangye29.jpg" alt="">
-									<div class="zhez">
-										<p>国企全套门户网站模板</p>
+										<p>{{item.name4}}</p>
 									</div>
 									<div class="shang">
 										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
@@ -469,47 +170,17 @@
 						</el-tab-pane>
 						<el-tab-pane label="网站首页">
 							<ul class="tou5-3">
-								<li class="zli-1">
-									<a href="javascript:void(null)">
-										<img src="../imges/wangye30.jpg" alt="">
-										<div class="zli1-1">
-											<h1>数码维修网站首页模板</h1>
-											<div class="zli2-1">
-												<el-row>
-													<el-button type="primary">使用</el-button>
-													<el-button type="success">预览</el-button>
-												</el-row>	
-											</div>	
-										</div>
-									</a>
-								</li>
-								<li class="zli-1">
-									<a href="javascript:void(null)">
-										<img src="../imges/wangye31.jpg" alt="">
-										<div class="zli1-1">
-											<h1>公司首页网站模板</h1>
-											<div class="zli2-1">
-												<el-row>
-													<el-button type="primary">使用</el-button>
-													<el-button type="success">预览</el-button>
-												</el-row>	
-											</div>	
-										</div>
-									</a>
-								</li>
-								<li class="zli-1">
-									<a href="javascript:void(null)">
-										<img src="../imges/wangye32.jpg" alt="">
-										<div class="zli1-1">
-											<h1>简约旅游网站首页模板</h1>
-											<div class="zli2-1">
-												<el-row>
-													<el-button type="primary">使用</el-button>
-													<el-button type="success">预览</el-button>
-												</el-row>	
-											</div>	
-										</div>
-									</a>
+								<li class="zli-1" v-for="item in jinp5">
+									<img v-bind:src="item.img5" alt="">
+									<div class="zli1-1">
+										<h1>{{item.name5}}</h1>
+										<div class="zli2-1">
+											<el-row>
+												<el-button type="primary">使用</el-button>
+												<el-button type="success">预览</el-button>
+											</el-row>	
+										</div>	
+									</div>
 								</li>
 								<div class="tou5-4">查看更多</div>
 							</ul>
@@ -570,7 +241,7 @@
 	</div>
 </template>
 
-<script>
+<script type="text/javascript">
 export default {
   name: 'index',
   props: {},
@@ -581,10 +252,62 @@ export default {
 		},
 		handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
-			},
+		},
     },
 	data(){
 		return {
+			abc:[
+				{img:require("../imges/wangye1.png"),name:"三维设计平台网站模板"},
+				{img:require("../imges/wangye2.png"),name:"拖车救援公司服务网站模板"},
+				{img:require("../imges/wangye3.png"),name:"灯具装饰公司网站模板"},
+				{img:require("../imges/wangye4.png"),name:"美发在线服务网站模板"},
+				{img:require("../imges/wangye5.png"),name:"卫浴商铺网站模板"}
+			],
+			// 更多精品
+			jinp:[
+				{img:require("../imges/wangye6.png"),name:"汽车维护保养公司网站模板"},
+				{img:require("../imges/wangye7.png"),name:"软件服务公司网站模板"},
+				{img:require("../imges/wangye8.png"),name:"房车旅行租赁公司网站模板"},
+			],
+			// app
+			jinp1:[
+				{img1:require("../imges/wangye9.jpg"),name1:"外卖App开发模板"},
+				{img1:require("../imges/wangye10.jpg"),name1:"生活服务App开发模板"},
+				{img1:require("../imges/wangye11.jpg"),name1:"外卖App开发模板"},
+				{img1:require("../imges/wangye12.jpg"),name1:"外卖App开发模板"},
+				{img1:require("../imges/wangye13.jpg"),name1:"婚庆App开发模板"},
+				{img1:require("../imges/wangye14.jpg"),name1:"母婴App开发模板"},
+			],
+			// 商铺
+			jinp2:[
+				{img2:require("../imges/wangye15.png"),name2:"雨伞阳伞商铺网站模板"},
+				{img2:require("../imges/wangye16.png"),name2:"休闲食品商城网站模板"},
+				{img2:require("../imges/wangye17.png"),name2:"冰淇淋品牌网站模板"}
+			],
+			//个人
+			jinp3:[
+				{img3:require("../imges/wangye18.jpg"),name3:"网格布局网站模板"},
+				{img3:require("../imges/wangye19.jpg"),name3:"生活记录博客网站模板"},
+				{img3:require("../imges/wangye20.jpg"),name3:"全屏音乐个人网站模板"},
+				{img3:require("../imges/wangye21.jpg"),name3:"黑色背景设计师个人网站模板"},
+				{img3:require("../imges/wangye22.jpg"),name3:"创意相册图片个人网站模板"},
+				{img3:require("../imges/wangye23.jpg"),name3:"个人博客首页网站模板"},
+			],
+			//H5
+			jinp4:[
+				{img4:require("../imges/wangye24.jpg"),name4:"企业旅游网站模板"},
+				{img4:require("../imges/wangye25.jpg"),name4:"生活记录博客网站模板"},
+				{img4:require("../imges/wangye26.jpg"),name4:"唯美婚礼钻石珠宝首饰网站模板"},
+				{img4:require("../imges/wangye27.jpg"),name4:"国外企业科技商务电子网站模板"},
+				{img4:require("../imges/wangye28.jpg"),name4:"虚拟币与字母H2.5D网站模板"},
+				{img4:require("../imges/wangye29.jpg"),name4:"国企全套门户网站模板"},
+			],
+			//网站首页
+			jinp5:[
+				{img5:require("../imges/wangye30.jpg"),name5:"数码维修网站首页模板"},
+				{img5:require("../imges/wangye31.jpg"),name5:"公司首页网站模板"},
+				{img5:require("../imges/wangye32.jpg"),name5:"简约旅游网站首页模板"},
+			],
 			// 图片轮播
 			imagesbox:[
 				{id:0,idView:require("../imges/lun1.jpg")},
@@ -596,7 +319,6 @@ export default {
 			currentPage3: 1,
 			// 选项卡
 			tabPosition: 'left',
-			
 		}
 	}
 }

@@ -27,7 +27,7 @@
 								<el-dropdown-item>待处理订单</el-dropdown-item>
 								<el-dropdown-item>消息</el-dropdown-item>
 								<el-dropdown-item>我的关注</el-dropdown-item>
-								<el-dropdown-item>我的回答</el-dropdown-item>
+								<el-dropdown-item><router-link tag="a" to="/gouwuc" style="color: #606266;">我的购物车</router-link></el-dropdown-item>
 								<el-dropdown-item>我的D豆</el-dropdown-item>
 							</el-dropdown-menu>
 						</el-dropdown>
@@ -102,7 +102,7 @@ window.onscroll=function(){
 		}
 }
 window.onload = function(){
-	let oUl = document.querySelector('.tou1-2')
+	let oUl = document.querySelector('.tou1-2');
 	let oLi = oUl.querySelectorAll('a');
 	// 添加点击事件
 	for(let i=0;i<oLi.length;i++){
