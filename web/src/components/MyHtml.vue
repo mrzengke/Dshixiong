@@ -45,11 +45,11 @@
 							<div class="tou3-4"><img src="../imges/muban.jpg" alt=""></div>
 						</div>
 					</li>
-					<li class="zli" v-for="item in abc">
+					<li class="zli" v-for="(item,index) in nb" @click="b(index)">
 						<router-link tag="a" to="/xiangq">
-								<img v-bind:src="item.img"  alt="">
+								<img :src="item.diyiimg"  alt="">
 								<div class="zli1">
-									<p>{{item.name}}</p>
+									<p>{{item.diyiname}}</p>
 									<div class="zli2">
 										<el-row>
 											<el-button type="primary">使用</el-button>
@@ -83,6 +83,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<!-- 更多精品 -->
 		<div class="tou5">
 			<div class="tou5-1">
@@ -91,10 +92,10 @@
 					<el-tabs :tab-position="tabPosition">
 						<el-tab-pane label="企业">
 							<ul class="tou5-3">
-								<li class="zli-1" v-for="item in jinp">
-									<img v-bind:src="item.img" alt="">
+								<li class="zli-1" v-for="item in nb">
+									<img :src="item.dierimg" alt="">
 									<div class="zli1-1">
-										<h1>{{item.name}}</h1>
+										<h1>{{item.diername}}</h1>
 										<div class="zli2-1">
 											<el-row>
 												<el-button type="primary">使用</el-button>
@@ -108,10 +109,10 @@
 						</el-tab-pane>
 						<el-tab-pane label="App">
 							<ul class="tou5-5">
-								<li v-for="item in jinp1">
-									<img v-bind:src="item.img1" alt="">
+								<li v-for="item in nb">
+									<img :src="item.disanimg" alt="">
 									<div class="zhez">
-										<p>{{item.name1}}</p>
+										<p>{{item.disanname}}</p>
 									</div>
 									<div class="shang">
 										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
@@ -123,10 +124,10 @@
 						</el-tab-pane>
 						<el-tab-pane label="商铺">
 							<ul class="tou5-3">
-								<li class="zli-1" v-for="item in jinp2">
-									<img v-bind:src="item.img2" alt="">
+								<li class="zli-1" v-for="item in nb">
+									<img :src="item.disiimg" alt="">
 									<div class="zli1-1">
-										<h1>{{item.name2}}</h1>
+										<h1>{{item.disiname}}</h1>
 										<div class="zli2-1">
 											<el-row>
 												<el-button type="primary">使用</el-button>
@@ -140,10 +141,10 @@
 						</el-tab-pane>
 						<el-tab-pane label="个人">
 							<ul class="tou5-5">
-								<li v-for="item in jinp3">
-									<img v-bind:src="item.img3" alt="">
+								<li v-for="item in nb">
+									<img :src="item.diwuimg" alt="">
 									<div class="zhez">
-										<p>{{item.name3}}</p>
+										<p>{{item.diwuname}}</p>
 									</div>
 									<div class="shang">
 										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
@@ -155,10 +156,10 @@
 						</el-tab-pane>
 						<el-tab-pane label="H5网页">
 							<ul class="tou5-5">
-								<li v-for="item in jinp4">
-									<img v-bind:src="item.img4" alt="">
+								<li v-for="item in nb">
+									<img :src="item.diliuimg" alt="">
 									<div class="zhez">
-										<p>{{item.name4}}</p>
+										<p>{{item.diliuname}}</p>
 									</div>
 									<div class="shang">
 										<el-button type="warning" icon="el-icon-star-off" circle></el-button>
@@ -170,10 +171,10 @@
 						</el-tab-pane>
 						<el-tab-pane label="网站首页">
 							<ul class="tou5-3">
-								<li class="zli-1" v-for="item in jinp5">
-									<img v-bind:src="item.img5" alt="">
+								<li class="zli-1" v-for="item in nb">
+									<img :src="item.diqiimg" alt="">
 									<div class="zli1-1">
-										<h1>{{item.name5}}</h1>
+										<h1>{{item.diqiname}}</h1>
 										<div class="zli2-1">
 											<el-row>
 												<el-button type="primary">使用</el-button>
@@ -245,6 +246,38 @@
 export default {
   name: 'index',
   props: {},
+  created:function(){
+	var _that = this;
+	this.axios.get('/MyHtml').then(function (response) {
+		for(var i = 0 ;i<response.data.length;i++){
+			if(response.data[i].diyiimg){
+				response.data[i].diyiimg=require(`../imges/${response.data[i].diyiimg}`)
+			}
+			if(response.data[i].dierimg){
+				response.data[i].dierimg=require(`../imges/${response.data[i].dierimg}`)
+			}
+			if(response.data[i].disanimg){
+				response.data[i].disanimg=require(`../imges/${response.data[i].disanimg}`)
+			}
+			if(response.data[i].disiimg){
+				response.data[i].disiimg=require(`../imges/${response.data[i].disiimg}`)
+			}
+			if(response.data[i].diwuimg){
+				response.data[i].diwuimg=require(`../imges/${response.data[i].diwuimg}`)
+			}
+			if(response.data[i].diliuimg){
+				response.data[i].diliuimg=require(`../imges/${response.data[i].diliuimg}`)
+			}
+			if(response.data[i].diqiimg){
+				response.data[i].diqiimg=require(`../imges/${response.data[i].diqiimg}`)
+			}
+		}
+		_that.nb = response.data;
+		})
+		.catch(function (error) {
+		console.log(error);
+		});
+	},
 	// 页码
 	methods: {
 		handleSizeChange(val) {
@@ -253,61 +286,26 @@ export default {
 		handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
 		},
+		b(index){
+			console.log(this.nb[index].diyiimg)
+			console.log(this.nb[index].diyiname)
+			updates:{
+              this.$router.push({
+                path:'/xiangq',
+                name:'xiangq',
+                params:{
+				 id:'1',
+                 img : this.nb[index].diyiimg,
+                 name : this.nb[index].diyiname,
+                }
+              })
+            }
+
+		}
     },
 	data(){
 		return {
-			abc:[
-				{img:require("../imges/wangye1.png"),name:"三维设计平台网站模板"},
-				{img:require("../imges/wangye2.png"),name:"拖车救援公司服务网站模板"},
-				{img:require("../imges/wangye3.png"),name:"灯具装饰公司网站模板"},
-				{img:require("../imges/wangye4.png"),name:"美发在线服务网站模板"},
-				{img:require("../imges/wangye5.png"),name:"卫浴商铺网站模板"}
-			],
-			// 更多精品
-			jinp:[
-				{img:require("../imges/wangye6.png"),name:"汽车维护保养公司网站模板"},
-				{img:require("../imges/wangye7.png"),name:"软件服务公司网站模板"},
-				{img:require("../imges/wangye8.png"),name:"房车旅行租赁公司网站模板"},
-			],
-			// app
-			jinp1:[
-				{img1:require("../imges/wangye9.jpg"),name1:"外卖App开发模板"},
-				{img1:require("../imges/wangye10.jpg"),name1:"生活服务App开发模板"},
-				{img1:require("../imges/wangye11.jpg"),name1:"外卖App开发模板"},
-				{img1:require("../imges/wangye12.jpg"),name1:"外卖App开发模板"},
-				{img1:require("../imges/wangye13.jpg"),name1:"婚庆App开发模板"},
-				{img1:require("../imges/wangye14.jpg"),name1:"母婴App开发模板"},
-			],
-			// 商铺
-			jinp2:[
-				{img2:require("../imges/wangye15.png"),name2:"雨伞阳伞商铺网站模板"},
-				{img2:require("../imges/wangye16.png"),name2:"休闲食品商城网站模板"},
-				{img2:require("../imges/wangye17.png"),name2:"冰淇淋品牌网站模板"}
-			],
-			//个人
-			jinp3:[
-				{img3:require("../imges/wangye18.jpg"),name3:"网格布局网站模板"},
-				{img3:require("../imges/wangye19.jpg"),name3:"生活记录博客网站模板"},
-				{img3:require("../imges/wangye20.jpg"),name3:"全屏音乐个人网站模板"},
-				{img3:require("../imges/wangye21.jpg"),name3:"黑色背景设计师个人网站模板"},
-				{img3:require("../imges/wangye22.jpg"),name3:"创意相册图片个人网站模板"},
-				{img3:require("../imges/wangye23.jpg"),name3:"个人博客首页网站模板"},
-			],
-			//H5
-			jinp4:[
-				{img4:require("../imges/wangye24.jpg"),name4:"企业旅游网站模板"},
-				{img4:require("../imges/wangye25.jpg"),name4:"生活记录博客网站模板"},
-				{img4:require("../imges/wangye26.jpg"),name4:"唯美婚礼钻石珠宝首饰网站模板"},
-				{img4:require("../imges/wangye27.jpg"),name4:"国外企业科技商务电子网站模板"},
-				{img4:require("../imges/wangye28.jpg"),name4:"虚拟币与字母H2.5D网站模板"},
-				{img4:require("../imges/wangye29.jpg"),name4:"国企全套门户网站模板"},
-			],
-			//网站首页
-			jinp5:[
-				{img5:require("../imges/wangye30.jpg"),name5:"数码维修网站首页模板"},
-				{img5:require("../imges/wangye31.jpg"),name5:"公司首页网站模板"},
-				{img5:require("../imges/wangye32.jpg"),name5:"简约旅游网站首页模板"},
-			],
+			nb:[],
 			// 图片轮播
 			imagesbox:[
 				{id:0,idView:require("../imges/lun1.jpg")},

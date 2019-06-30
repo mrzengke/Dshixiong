@@ -22,40 +22,8 @@
 				</ul>
 				<div class="stou2-3" id="stou2-3">
 					<ul>
-						<li  v-for="item in shangc">
-							<img v-bind:src="item.img" alt="">
-							<div class="stou2-4">
-								<p>{{item.name}}</p>
-								<span>
-									<i class="el-icon-star-off"></i>
-									<i class="el-icon-shopping-cart-1"></i>
-								</span>
-							</div>
-							<div class="stou2-5">
-								<div class="sbao">
-									<button><i class="el-icon-download"></i>立即下载</button>
-									<button><i class="el-icon-shopping-cart-1"></i><router-link tag="a" to="/gouwuc" >加入购物车</router-link></button>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<div class="stou2-6">
-						<div class="block">
-							<el-pagination
-							  @size-change="handleSizeChange"
-							  @current-change="handleCurrentChange"
-							  :current-page.sync="currentPage1"
-							  :page-size="100"
-							  layout="prev, pager, next, jumper"
-							  :total="1000">
-							</el-pagination>
-						</div>
-					</div>
-				</div>
-				<div class="stou2-3">
-					<ul>
-						<li v-for="item in shangc1">
-							<img v-bind:src="item.img1" alt="">
+						<li  v-for="(item,index) in sc">
+							<img :src="item.img1" alt="">
 							<div class="stou2-4">
 								<p>{{item.name1}}</p>
 								<span>
@@ -65,8 +33,8 @@
 							</div>
 							<div class="stou2-5">
 								<div class="sbao">
-									<button><i class="el-icon-download"></i>立即下载</button>
-									<button><i class="el-icon-shopping-cart-1"></i><router-link tag="a" to="/gouwuc" >加入购物车</router-link></button>
+									<button ><i class="el-icon-download"></i>立即下载</button>
+									<button @click="pos(index)"><i class="el-icon-shopping-cart-1"></i>加入购物车</button>
 								</div>
 							</div>
 						</li>
@@ -86,8 +54,8 @@
 				</div>
 				<div class="stou2-3">
 					<ul>
-						<li v-for="item in shangc2">
-							<img v-bind:src="item.img2" alt="">
+						<li v-for="(item,index) in sc">
+							<img :src="item.img2" alt="">
 							<div class="stou2-4">
 								<p>{{item.name2}}</p>
 								<span>
@@ -98,7 +66,7 @@
 							<div class="stou2-5">
 								<div class="sbao">
 									<button><i class="el-icon-download"></i>立即下载</button>
-									<button><i class="el-icon-shopping-cart-1"></i><router-link tag="a" to="/gouwuc" >加入购物车</router-link></button>
+									<button @click="pos2(index)"><i class="el-icon-shopping-cart-1"></i>加入购物车</button>
 								</div>
 							</div>
 						</li>
@@ -118,8 +86,8 @@
 				</div>
 				<div class="stou2-3">
 					<ul>
-						<li v-for="item in shangc3">
-							<img v-bind:src="item.img3" alt="">
+						<li v-for="(item,index) in sc">
+							<img :src="item.img3" alt="">
 							<div class="stou2-4">
 								<p>{{item.name3}}</p>
 								<span>
@@ -130,7 +98,7 @@
 							<div class="stou2-5">
 								<div class="sbao">
 									<button><i class="el-icon-download"></i>立即下载</button>
-									<button><i class="el-icon-shopping-cart-1"></i><router-link tag="a" to="/gouwuc" >加入购物车</router-link></button>
+									<button @click="pos3(index)"><i class="el-icon-shopping-cart-1"></i>加入购物车</button>
 								</div>
 							</div>
 						</li>
@@ -150,8 +118,8 @@
 				</div>
 				<div class="stou2-3">
 					<ul>
-						<li v-for="item in shangc4">
-							<img v-bind:src="item.img4" alt="">
+						<li v-for="(item,index) in sc">
+							<img :src="item.img4" alt="">
 							<div class="stou2-4">
 								<p>{{item.name4}}</p>
 								<span>
@@ -162,7 +130,7 @@
 							<div class="stou2-5">
 								<div class="sbao">
 									<button><i class="el-icon-download"></i>立即下载</button>
-									<button><i class="el-icon-shopping-cart-1"></i><router-link tag="a" to="/gouwuc" >加入购物车</router-link></button>
+									<button @click="pos4(index)"><i class="el-icon-shopping-cart-1"></i></button>
 								</div>
 							</div>
 						</li>
@@ -182,8 +150,8 @@
 				</div>
 				<div class="stou2-3">
 					<ul>
-						<li v-for="item in shangc5">
-							<img v-bind:src="item.img5" alt="">
+						<li v-for="(item,index) in sc">
+							<img :src="item.img5" alt="">
 							<div class="stou2-4">
 								<p>{{item.name5}}</p>
 								<span>
@@ -194,7 +162,7 @@
 							<div class="stou2-5">
 								<div class="sbao">
 									<button><i class="el-icon-download"></i>立即下载</button>
-									<button><i class="el-icon-shopping-cart-1"></i><router-link tag="a" to="/gouwuc" >加入购物车</router-link></button>
+									<button @click="pos5(index)"><i class="el-icon-shopping-cart-1"></i>加入购物车</button>
 								</div>
 							</div>
 						</li>
@@ -214,8 +182,8 @@
 				</div>
 				<div class="stou2-3">
 					<ul>
-						<li v-for="item in shangc6">
-							<img v-bind:src="item.img6" alt="">
+						<li v-for="(item,index) in sc">
+							<img :src="item.img6" alt="">
 							<div class="stou2-4">
 								<p>{{item.name6}}</p>
 								<span>
@@ -226,7 +194,39 @@
 							<div class="stou2-5">
 								<div class="sbao">
 									<button><i class="el-icon-download"></i>立即下载</button>
-									<button><i class="el-icon-shopping-cart-1"></i><router-link tag="a" to="/gouwuc" >加入购物车</router-link></button>
+									<button @click="pos6(index)"><i class="el-icon-shopping-cart-1"></i>加入购物车</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="stou2-6">
+						<div class="block">
+							<el-pagination
+							  @size-change="handleSizeChange"
+							  @current-change="handleCurrentChange"
+							  :current-page.sync="currentPage1"
+							  :page-size="100"
+							  layout="prev, pager, next, jumper"
+							  :total="1000">
+							</el-pagination>
+						</div>
+					</div>
+				</div>
+				<div class="stou2-3">
+					<ul>
+						<li v-for="(item,index) in sc">
+							<img :src="item.img7" alt="">
+							<div class="stou2-4">
+								<p>{{item.name7}}</p>
+								<span>
+									<i class="el-icon-star-off"></i>
+									<i class="el-icon-shopping-cart-1"></i>
+								</span>
+							</div>
+							<div class="stou2-5">
+								<div class="sbao">
+									<button><i class="el-icon-download"></i>立即下载</button>
+									<button @click="pos7(index)"><i class="el-icon-shopping-cart-1"></i>加入购物车</button>
 								</div>
 							</div>
 						</li>
@@ -266,162 +266,41 @@
 
 <script>
 export default {
+  created:function(){
+	var _that = this;
+	this.axios.get('/shangc').then(function (response) {
+		for(var i = 0 ;i<response.data.length;i++){
+			if(response.data[i].img1){
+				response.data[i].img1=require(`../imges/shangc/${response.data[i].img1}`)
+			}
+			if(response.data[i].img2){
+				response.data[i].img2=require(`../imges/shangc/${response.data[i].img2}`)
+			}
+			if(response.data[i].img3){
+				response.data[i].img3=require(`../imges/shangc/${response.data[i].img3}`)
+			}
+			if(response.data[i].img4){
+				response.data[i].img4=require(`../imges/shangc/${response.data[i].img4}`)
+			}
+			if(response.data[i].img5){
+				response.data[i].img5=require(`../imges/shangc/${response.data[i].img5}`)
+			}
+			if(response.data[i].img6){
+				response.data[i].img6=require(`../imges/shangc/${response.data[i].img6}`)
+			}
+			if(response.data[i].img7){
+				response.data[i].img7=require(`../imges/shangc/${response.data[i].img7}`)
+			}
+		}
+		_that.sc = response.data;
+		})
+		.catch(function (error) {
+		console.log(error);
+		});
+	},
 	data() {
 	  return {
-		  shangc:[
-			  {img:require("../imges/shangc/21.jpg"),name:"网站个人简历模板"},
-			  {img:require("../imges/shangc/22.jpg"),name:"网站主页模板"},
-			  {img:require("../imges/shangc/23.jpg"),name:"音乐播放器模板"},
-			  {img:require("../imges/shangc/24.jpg"),name:"网站建设联系我们模板"},
-			  {img:require("../imges/shangc/25.jpg"),name:"响应式网站模板"},
-			  {img:require("../imges/shangc/26.jpg"),name:"扁平网站首页模板"},
-			  {img:require("../imges/shangc/27.jpg"),name:"商务网站模板"},
-			  {img:require("../imges/shangc/28.jpg"),name:"扁平响应式彩色模板"},
-			  {img:require("../imges/shangc/29.jpg"),name:"响应式网站模板"},
-			  {img:require("../imges/shangc/30.jpg"),name:"响应式网站模板"},
-			  {img:require("../imges/shangc/31.jpg"),name:"食品网站模板"},
-			  {img:require("../imges/shangc/32.jpg"),name:"网站创意模板"},
-			  {img:require("../imges/shangc/33.jpg"),name:"滑板商店创意模板"},
-			  {img:require("../imges/shangc/34.jpg"),name:"运动用品商店模板"},
-			  {img:require("../imges/shangc/35.jpg"),name:"三维设计平台网站模板"},
-			  {img:require("../imges/shangc/36.jpg"),name:"拖车救援服务公司模板"},
-			  {img:require("../imges/shangc/37.jpg"),name:"精品卫浴商铺网站模板"},
-			  {img:require("../imges/shangc/38.jpg"),name:"川菜外卖服务网站模板"},
-			  {img:require("../imges/shangc/39.jpg"),name:"建筑环艺公司模板"},
-			  {img:require("../imges/shangc/40.jpg"),name:"灯具装饰公司模板"},
-		  ],
-		  shangc1:[
-			  {img1:require("../imges/shangc/41.jpg"),name1:"网站个人简历模板"},
-			  {img1:require("../imges/shangc/42.jpg"),name1:"网站主页模板"},
-			  {img1:require("../imges/shangc/43.jpg"),name1:"音乐播放器模板"},
-			  {img1:require("../imges/shangc/44.jpg"),name1:"网站建设联系我们模板"},
-			  {img1:require("../imges/shangc/45.jpg"),name1:"响应式网站模板"},
-			  {img1:require("../imges/shangc/46.jpg"),name1:"扁平网站首页模板"},
-			  {img1:require("../imges/shangc/47.jpg"),name1:"商务网站模板"},
-			  {img1:require("../imges/shangc/48.jpg"),name1:"扁平响应式彩色模板"},
-			  {img1:require("../imges/shangc/49.jpg"),name1:"响应式网站模板"},
-			  {img1:require("../imges/shangc/50.jpg"),name1:"响应式网站模板"},
-			  {img1:require("../imges/shangc/51.jpg"),name1:"食品网站模板"},
-			  {img1:require("../imges/shangc/52.jpg"),name1:"网站创意模板"},
-			  {img1:require("../imges/shangc/53.jpg"),name1:"滑板商店创意模板"},
-			  {img1:require("../imges/shangc/54.jpg"),name1:"运动用品商店模板"},
-			  {img1:require("../imges/shangc/55.jpg"),name1:"三维设计平台网站模板"},
-			  {img1:require("../imges/shangc/56.jpg"),name1:"拖车救援服务公司模板"},
-			  {img1:require("../imges/shangc/57.jpg"),name1:"精品卫浴商铺网站模板"},
-			  {img1:require("../imges/shangc/58.jpg"),name1:"川菜外卖服务网站模板"},
-			  {img1:require("../imges/shangc/59.jpg"),name1:"建筑环艺公司模板"},
-			  {img1:require("../imges/shangc/60.jpg"),name1:"灯具装饰公司模板"},
-		  ],
-		  shangc2:[
-			  {img2:require("../imges/shangc/61.jpg"),name2:"网站个人简历模板"},
-			  {img2:require("../imges/shangc/62.jpg"),name2:"网站主页模板"},
-			  {img2:require("../imges/shangc/63.jpg"),name2:"音乐播放器模板"},
-			  {img2:require("../imges/shangc/64.jpg"),name2:"网站建设联系我们模板"},
-			  {img2:require("../imges/shangc/65.jpg"),name2:"响应式网站模板"},
-			  {img2:require("../imges/shangc/66.jpg"),name2:"扁平网站首页模板"},
-			  {img2:require("../imges/shangc/67.jpg"),name2:"商务网站模板"},
-			  {img2:require("../imges/shangc/68.jpg"),name2:"扁平响应式彩色模板"},
-			  {img2:require("../imges/shangc/69.jpg"),name2:"响应式网站模板"},
-			  {img2:require("../imges/shangc/70.jpg"),name2:"响应式网站模板"},
-			  {img2:require("../imges/shangc/71.jpg"),name2:"食品网站模板"},
-			  {img2:require("../imges/shangc/72.jpg"),name2:"网站创意模板"},
-			  {img2:require("../imges/shangc/73.jpg"),name2:"滑板商店创意模板"},
-			  {img2:require("../imges/shangc/74.jpg"),name2:"运动用品商店模板"},
-			  {img2:require("../imges/shangc/75.jpg"),name2:"三维设计平台网站模板"},
-			  {img2:require("../imges/shangc/76.jpg"),name2:"拖车救援服务公司模板"},
-			  {img2:require("../imges/shangc/77.jpg"),name2:"精品卫浴商铺网站模板"},
-			  {img2:require("../imges/shangc/78.jpg"),name2:"川菜外卖服务网站模板"},
-			  {img2:require("../imges/shangc/79.jpg"),name2:"建筑环艺公司模板"},
-			  {img2:require("../imges/shangc/80.jpg"),name2:"灯具装饰公司模板"},
-		  ],
-		  shangc3:[
-			  {img3:require("../imges/shangc/81.jpg"),name3:"网站个人简历模板"},
-			  {img3:require("../imges/shangc/82.jpg"),name3:"网站主页模板"},
-			  {img3:require("../imges/shangc/83.jpg"),name3:"音乐播放器模板"},
-			  {img3:require("../imges/shangc/84.jpg"),name3:"网站建设联系我们模板"},
-			  {img3:require("../imges/shangc/85.jpg"),name3:"响应式网站模板"},
-			  {img3:require("../imges/shangc/86.jpg"),name3:"扁平网站首页模板"},
-			  {img3:require("../imges/shangc/87.jpg"),name3:"商务网站模板"},
-			  {img3:require("../imges/shangc/88.jpg"),name3:"扁平响应式彩色模板"},
-			  {img3:require("../imges/shangc/89.jpg"),name3:"响应式网站模板"},
-			  {img3:require("../imges/shangc/90.jpg"),name3:"响应式网站模板"},
-			  {img3:require("../imges/shangc/91.jpg"),name3:"食品网站模板"},
-			  {img3:require("../imges/shangc/92.jpg"),name3:"网站创意模板"},
-			  {img3:require("../imges/shangc/93.jpg"),name3:"滑板商店创意模板"},
-			  {img3:require("../imges/shangc/94.jpg"),name3:"运动用品商店模板"},
-			  {img3:require("../imges/shangc/95.jpg"),name3:"三维设计平台网站模板"},
-			  {img3:require("../imges/shangc/96.jpg"),name3:"拖车救援服务公司模板"},
-			  {img3:require("../imges/shangc/97.jpg"),name3:"精品卫浴商铺网站模板"},
-			  {img3:require("../imges/shangc/98.jpg"),name3:"川菜外卖服务网站模板"},
-			  {img3:require("../imges/shangc/99.jpg"),name3:"建筑环艺公司模板"},
-			  {img3:require("../imges/shangc/100.jpg"),name3:"灯具装饰公司模板"},
-		  ],
-		  shangc4:[
-			  {img4:require("../imges/shangc/101.jpg"),name4:"网站个人简历模板"},
-			  {img4:require("../imges/shangc/102.jpg"),name4:"网站主页模板"},
-			  {img4:require("../imges/shangc/103.jpg"),name4:"音乐播放器模板"},
-			  {img4:require("../imges/shangc/104.jpg"),name4:"网站建设联系我们模板"},
-			  {img4:require("../imges/shangc/105.jpg"),name4:"响应式网站模板"},
-			  {img4:require("../imges/shangc/106.jpg"),name4:"扁平网站首页模板"},
-			  {img4:require("../imges/shangc/107.jpg"),name4:"商务网站模板"},
-			  {img4:require("../imges/shangc/108.jpg"),name4:"扁平响应式彩色模板"},
-			  {img4:require("../imges/shangc/109.jpg"),name4:"响应式网站模板"},
-			  {img4:require("../imges/shangc/110.jpg"),name4:"响应式网站模板"},
-			  {img4:require("../imges/shangc/111.jpg"),name4:"食品网站模板"},
-			  {img4:require("../imges/shangc/112.jpg"),name4:"网站创意模板"},
-			  {img4:require("../imges/shangc/113.jpg"),name4:"滑板商店创意模板"},
-			  {img4:require("../imges/shangc/114.jpg"),name4:"运动用品商店模板"},
-			  {img4:require("../imges/shangc/115.jpg"),name4:"三维设计平台网站模板"},
-			  {img4:require("../imges/shangc/116.jpg"),name4:"拖车救援服务公司模板"},
-			  {img4:require("../imges/shangc/117.jpg"),name4:"精品卫浴商铺网站模板"},
-			  {img4:require("../imges/shangc/118.jpg"),name4:"川菜外卖服务网站模板"},
-			  {img4:require("../imges/shangc/119.jpg"),name4:"建筑环艺公司模板"},
-			  {img4:require("../imges/shangc/120.jpg"),name4:"灯具装饰公司模板"},
-		  ],
-		  shangc5:[
-			  {img5:require("../imges/shangc/81.jpg"),name5:"网站个人简历模板"},
-			  {img5:require("../imges/shangc/82.jpg"),name5:"网站主页模板"},
-			  {img5:require("../imges/shangc/83.jpg"),name5:"音乐播放器模板"},
-			  {img5:require("../imges/shangc/84.jpg"),name5:"网站建设联系我们模板"},
-			  {img5:require("../imges/shangc/85.jpg"),name5:"响应式网站模板"},
-			  {img5:require("../imges/shangc/86.jpg"),name5:"扁平网站首页模板"},
-			  {img5:require("../imges/shangc/87.jpg"),name5:"商务网站模板"},
-			  {img5:require("../imges/shangc/88.jpg"),name5:"扁平响应式彩色模板"},
-			  {img5:require("../imges/shangc/89.jpg"),name5:"响应式网站模板"},
-			  {img5:require("../imges/shangc/90.jpg"),name5:"响应式网站模板"},
-			  {img5:require("../imges/shangc/91.jpg"),name5:"食品网站模板"},
-			  {img5:require("../imges/shangc/92.jpg"),name5:"网站创意模板"},
-			  {img5:require("../imges/shangc/93.jpg"),name5:"滑板商店创意模板"},
-			  {img5:require("../imges/shangc/94.jpg"),name5:"运动用品商店模板"},
-			  {img5:require("../imges/shangc/95.jpg"),name5:"三维设计平台网站模板"},
-			  {img5:require("../imges/shangc/96.jpg"),name5:"拖车救援服务公司模板"},
-			  {img5:require("../imges/shangc/97.jpg"),name5:"精品卫浴商铺网站模板"},
-			  {img5:require("../imges/shangc/98.jpg"),name5:"川菜外卖服务网站模板"},
-			  {img5:require("../imges/shangc/99.jpg"),name5:"建筑环艺公司模板"},
-			  {img5:require("../imges/shangc/100.jpg"),name5:"灯具装饰公司模板"},
-		  ],
-		  shangc6:[
-			  {img6:require("../imges/shangc/61.jpg"),name6:"网站个人简历模板"},
-			  {img6:require("../imges/shangc/62.jpg"),name6:"网站主页模板"},
-			  {img6:require("../imges/shangc/63.jpg"),name6:"音乐播放器模板"},
-			  {img6:require("../imges/shangc/64.jpg"),name6:"网站建设联系我们模板"},
-			  {img6:require("../imges/shangc/65.jpg"),name6:"响应式网站模板"},
-			  {img6:require("../imges/shangc/66.jpg"),name6:"扁平网站首页模板"},
-			  {img6:require("../imges/shangc/67.jpg"),name6:"商务网站模板"},
-			  {img6:require("../imges/shangc/68.jpg"),name6:"扁平响应式彩色模板"},
-			  {img6:require("../imges/shangc/69.jpg"),name6:"响应式网站模板"},
-			  {img6:require("../imges/shangc/70.jpg"),name6:"响应式网站模板"},
-			  {img6:require("../imges/shangc/71.jpg"),name6:"食品网站模板"},
-			  {img6:require("../imges/shangc/72.jpg"),name6:"网站创意模板"},
-			  {img6:require("../imges/shangc/73.jpg"),name6:"滑板商店创意模板"},
-			  {img6:require("../imges/shangc/74.jpg"),name6:"运动用品商店模板"},
-			  {img6:require("../imges/shangc/75.jpg"),name6:"三维设计平台网站模板"},
-			  {img6:require("../imges/shangc/76.jpg"),name6:"拖车救援服务公司模板"},
-			  {img6:require("../imges/shangc/77.jpg"),name6:"精品卫浴商铺网站模板"},
-			  {img6:require("../imges/shangc/78.jpg"),name6:"川菜外卖服务网站模板"},
-			  {img6:require("../imges/shangc/79.jpg"),name6:"建筑环艺公司模板"},
-			  {img6:require("../imges/shangc/80.jpg"),name6:"灯具装饰公司模板"},
-		  ],
+		  sc:[],
 		  ruleForm:{
 			  pass:'1',
 			  age:'2'
@@ -441,7 +320,7 @@ export default {
 	},
 	methods: {
 		handleClick(tab, event) {
-			console.log(tab, event);
+			
 		},
 		handleSizeChange(val) {
 			console.log(`每页 ${val} 条`);
@@ -455,7 +334,6 @@ export default {
 		
 			for(let i=0;i<ol.length;i++){
 				ol[i].index = i;
-				console.log(ol[i]);
 				ol[i].onclick = function(){
 					// 清除样式
 					for(let j=0;j<ol.length;j++){
@@ -467,6 +345,98 @@ export default {
 				};
 			}
 		},
+		pos(index){
+			var params = new URLSearchParams();
+			params.append('image', this.sc[index].src1);
+			params.append('name', this.sc[index].name1);
+			params.append('price', 400);
+			params.append('num', 1);
+			axios.post('/gouwuc',params).then(function (response) {
+				alert(response.data)
+			})
+			.catch(function (error) {
+			console.log(error);
+			});
+		},
+		pos2(index){
+			var params = new URLSearchParams();
+			params.append('image', this.sc[index].src2);
+			params.append('name', this.sc[index].name2);
+			params.append('price', 800);
+			params.append('num', 1);
+			axios.post('/gouwuc',params).then(function (response) {
+				alert(response.data)
+			})
+			.catch(function (error) {
+			console.log(error);
+			});
+		},
+		pos3(index){
+			var params = new URLSearchParams();
+			params.append('image', this.sc[index].src3);
+			params.append('name', this.sc[index].name3);
+			params.append('price', 200);
+			params.append('num', 1);
+			axios.post('/gouwuc',params).then(function (response) {
+				alert(response.data)
+			})
+			.catch(function (error) {
+			console.log(error);
+			});
+		},
+		pos4(index){
+			var params = new URLSearchParams();
+			params.append('image', this.sc[index].src4);
+			params.append('name', this.sc[index].name4);
+			params.append('price', 300);
+			params.append('num', 1);
+			axios.post('/gouwuc',params).then(function (response) {
+				alert(response.data)
+			})
+			.catch(function (error) {
+			console.log(error);
+			});
+		},
+		pos5(index){
+			var params = new URLSearchParams();
+			params.append('image', this.sc[index].src5);
+			params.append('name', this.sc[index].name5);
+			params.append('price', 500);
+			params.append('num', 1);
+			axios.post('/gouwuc',params).then(function (response) {
+				alert(response.data)
+			})
+			.catch(function (error) {
+			console.log(error);
+			});
+		},
+		pos6(index){
+			var params = new URLSearchParams();
+			params.append('image', this.sc[index].src6);
+			params.append('name', this.sc[index].name6);
+			params.append('price', 800);
+			params.append('num', 1);
+			axios.post('/gouwuc',params).then(function (response) {
+				alert(response.data)
+			})
+			.catch(function (error) {
+			console.log(error);
+			});
+		},
+		pos7(index){
+			var params = new URLSearchParams();
+			params.append('image', this.sc[index].src7);
+			params.append('name', this.sc[index].name7);
+			params.append('price', 1200);
+			params.append('num', 1);
+			axios.post('/gouwuc',params).then(function (response) {
+				alert(response.data)
+			})
+			.catch(function (error) {
+			console.log(error);
+			});
+		},
+
 		
 		
 		

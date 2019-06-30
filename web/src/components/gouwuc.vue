@@ -77,43 +77,7 @@ export default {
   props: {},
 	data() {
 		return {
-			list: [{
-				id: 1,
-				image: apple,
-				name: "网站个人简历模板",
-				price: 2000.00,
-				checked: false,
-				num: 1,
-				remove: false
-			},
-			{
-				id: 2,
-				image: apple1,
-				name: "网站主页模板",
-				price: 800.00,
-				checked: false,
-				num: 1,
-				remove: false
-			},
-			{
-				id: 3,
-				image: apple2,
-				name: "音乐播放器模板",
-				price: 200.00,
-				checked: false,
-				num: 1,
-				remove: false
-			},
-			{
-				id: 4,
-				image: apple3,
-				name: "网站建设联系我们模板",
-				price: 600.00,
-				checked: false,
-				num: 1,
-				remove: false
-			}
-			],
+			list: [],
 			jisuan:0,
 			count: 0,
 			istrue: false,
@@ -164,11 +128,27 @@ export default {
 
 		}
 	},
+	created:function(){
+		var _that = this;
+		this.axios.get('/gouwuc').then(function (response) {
+			for(var i = 0 ;i<response.data.length;i++){
+				if(response.data[i].image){
+					response.data[i].image=require(`../imges/shangc/${response.data[i].image}`)
+				}
+			}
+			_that.list = response.data;
+			})
+			.catch(function (error) {
+			console.log(error);
+			});
+	},
 	methods: {
 		removeId(value) {
-			var ids = value.id
+
+
+			var ids = value.image
 			for (var i = 0; i < this.list.length; i++) {
-				if (ids == this.list[i].id) {
+				if (ids == this.list[i].image) {
 					this.list.splice(i, 1);
 				}
 			}

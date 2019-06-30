@@ -22,7 +22,7 @@ export default new Router({
 	  component: shangc
 	},
 	{
-	  path: '/xiangq',
+	  path: '/xiangq/:id',
 	  name: 'xiangq',
 	  component: xiangq
 	},

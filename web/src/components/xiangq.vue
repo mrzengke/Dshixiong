@@ -69,6 +69,7 @@
 export default	{
 	data(){
 		return{
+			img:'',
 			xiangq:[
 				{img:require('../imges/xiangq/1.png')},
 				{img:require('../imges/xiangq/2.png')},
@@ -95,7 +96,24 @@ export default	{
 				{img:require("../imges/xiangq/9.jpg")},
 			]
 		}
-	}
+	},
+	created(){
+		   this.getParams()
+		},
+		methods: {
+		  getParams () {
+			// 取到路由带过来的参数 
+			var routerParams = this.$route.params.img
+			var name = this.$route.params.name
+			// 将数据放在当前组件的数据内
+			console.log(routerParams)
+			console.log(name)
+		  }
+		},
+		watch: {
+		// 监测路由变化,只要变化了就调用获取路由参数方法将数据存储本组件即可
+		  '$route': 'getParams'
+		},
 }	
 </script>
 
