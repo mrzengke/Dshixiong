@@ -278,8 +278,8 @@ export default {
 		console.log(error);
 		});
 	},
-	// 页码
 	methods: {
+		// 页码
 		handleSizeChange(val) {
 			console.log(`每页 ${val} 条`);
 		},
@@ -287,8 +287,6 @@ export default {
         console.log(`当前页: ${val}`);
 		},
 		b(index){
-			console.log(this.nb[index].diyiimg)
-			console.log(this.nb[index].diyiname)
 			updates:{
               this.$router.push({
                 path:'/xiangq',

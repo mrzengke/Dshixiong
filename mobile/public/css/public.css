@@ -1,0 +1,65 @@
+/* --------------------------样式重置------------------------- */
+body,html,div,blockquote,img,label,p,h1,h2,h3,h4,h5,h6,pre,ul,ol,li,dl,dt,dd,form,a,fieldset,input,th,td {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:none;
+}
+html {
+	height:100%;
+}
+body {
+	font-family:"微软雅黑";
+	font-size:14px;
+	height:100%;
+	background:#f5f5f5;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family:"微软雅黑";
+	padding:0;
+	margin:0;
+}
+ul,ol {
+	list-style:none;
+}
+a {
+	color:black;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+}
+
+/* --------------------------头部部分------------------------- */
+/* 顶部标题 */
+.beijing {
+	background:#fff;
+}
+.am-header-default .am-header-title,.am-header-default .am-header-title a {
+	color:#787a79;
+}
+.am-header-left .am-icon-caret-left{
+	font-size: 23px;
+	color:#FFF;
+}
+.am-header-title #tit{
+	color:#FFF;
+}
+.am-header-right .am-icon-user{
+	font-size: 23px;
+	color:#FFF;
+}
+
+
+/* --------------------------底部导航栏------------------------- */
+
+.gm-foot {
+	background:#fff;
+	border-top:1px solid #ddd;
+}
+.am-navbar-nav a {
+	color:#999999;
+}
+.am-navbar-nav .curr a {
+	/* color:#26a2ff; */
+}

@@ -11,12 +11,11 @@
 				</div>
 			</div>
 		</div>
-		<!-- 顶部定位部分 -->
-		<div class="ding">
+		<!-- 顶部定位部分  -->
+		<div class="ding" v-if="$route.path!=='/zc' & $route.path!=='/dl'">
 			<div class="ding1">
 				<div class="ding2">
-					<span>你好，请登录</span>
-					<span>免费注册</span>
+					<span><router-link tag='a' to="dl">{{this.GLOBAL.dl}}</router-link></span>
 				</div>
 				<ul class="ding3">
 					<li>我的订单</li>
@@ -26,9 +25,9 @@
 							<el-dropdown-menu slot="dropdown">
 								<el-dropdown-item>待处理订单</el-dropdown-item>
 								<el-dropdown-item>消息</el-dropdown-item>
-								<el-dropdown-item>我的关注</el-dropdown-item>
-								<el-dropdown-item><router-link tag="a" to="/gouwuc" style="color: #606266;">我的购物车</router-link></el-dropdown-item>
+								<el-dropdown-item>我的关注</el-dropdown-item><!--  -->
 								<el-dropdown-item>我的D豆</el-dropdown-item>
+								<el-dropdown-item><a href="javascript:void(0)" style="color: #606266;" @click="tiao()">我的购物车</a></el-dropdown-item>
 							</el-dropdown-menu>
 						</el-dropdown>
 					</li>
@@ -50,7 +49,7 @@
 			</div>
 		</div>
 		<!-- 头部部分 -->
-		<div class="tou" v-if="$route.path!=='/gouwuc'">
+		<div class="tou" v-if="$route.path!=='/gouwuc' & $route.path!=='/dl' & $route.path!=='/zc'">
 			<div class="tou1">
 				<div class="tou1-1"><img src="../imges/log.png" alt=""></div>
 				<div class="inp">
@@ -88,7 +87,18 @@ export default {
 			//input搜索框
  			input: '',
  		}
- 	}
+ 	},
+	methods:{
+		tiao(){
+			if(this.GLOBAA.kaiguan){
+				this.$router.push({
+				  path:'/gouwuc',
+				})
+			}else{
+				this.$message.error('您还未登录，请先登录');
+			}
+		}
+	},
  }
 // 顶部滑动滚轮出现部分
 window.onscroll=function(){
@@ -148,8 +158,8 @@ a{
 .ding2 span{
 	margin-right:10px; 
 }
-.ding2 span:nth-of-type(2){
-	color: red;
+.ding2 span a{
+	color: #fff;
 }
 .ding3{
 	width: 600px;
@@ -202,7 +212,7 @@ a{
 }
 .inp button{
 	width: 50px;
-	height: 42px;
+	height: 40px;
 	float: left;
 	background: @yanse;
 	border: 1px solid @yanse;

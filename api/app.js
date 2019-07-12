@@ -9,6 +9,10 @@ var usersRouter = require('./routes/users');
 var MyHtmlRouter = require('./routes/MyHtml');
 var shangcRouter = require('./routes/shangc');
 var gouwucRouter = require('./routes/gouwuc');
+var shanchuRouter = require('./routes/shanchu');
+var dlzcRouter = require('./routes/dlzc');
+var dlRouter = require('./routes/dl');
+
 
 var app = express();
 
@@ -27,6 +31,9 @@ app.use('/users', usersRouter);
 app.use('/MyHtml', MyHtmlRouter);
 app.use('/shangc', shangcRouter);
 app.use('/gouwuc', gouwucRouter);
+app.use('/shanchu', shanchuRouter);
+app.use('/dlzc', dlzcRouter);
+app.use('/dl', dlRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

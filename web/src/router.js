@@ -4,7 +4,8 @@ import shangc from './components/shangc'
 import xiangq from './components/xiangq'
 import gouwuc from './components/gouwuc'
 import MyHtml from './components/MyHtml'
-
+import dl from './components/dl'
+import zc from './components/zc'
 Vue.use(Router)
 
 export default new Router({
@@ -29,7 +30,17 @@ export default new Router({
 	{
 	  path: '/gouwuc',
 	  name: 'gouwuc',
-	  component: gouwuc
+	  component: gouwuc,
+	},
+	{
+	  path: '/dl',
+	  name: 'dl',
+	  component: dl,
+	},
+	{
+	  path: '/zc',
+	  name: 'zc',
+	  component: zc
 	},
 	{
 	  path:'*',

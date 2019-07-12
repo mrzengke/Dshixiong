@@ -346,10 +346,17 @@ export default {
 			}
 		},
 		pos(index){
+			this.$message({
+				  message: '成功加入购物车',
+				  type: 'success'
+			});
+			var yonghua = this.GLOBAL.dl
 			var params = new URLSearchParams();
 			params.append('image', this.sc[index].src1);
 			params.append('name', this.sc[index].name1);
 			params.append('price', 400);
+			params.append('abc', 123);
+			params.append('yonghu',this.GLOBAL.dl)
 			params.append('num', 1);
 			axios.post('/gouwuc',params).then(function (response) {
 				alert(response.data)
@@ -359,10 +366,15 @@ export default {
 			});
 		},
 		pos2(index){
+			this.$message({
+				  message: '成功加入购物车',
+				  type: 'success'
+			});
 			var params = new URLSearchParams();
 			params.append('image', this.sc[index].src2);
 			params.append('name', this.sc[index].name2);
 			params.append('price', 800);
+			params.append('abc', 123);
 			params.append('num', 1);
 			axios.post('/gouwuc',params).then(function (response) {
 				alert(response.data)
@@ -372,10 +384,15 @@ export default {
 			});
 		},
 		pos3(index){
+			this.$message({
+				  message: '成功加入购物车',
+				  type: 'success'
+			});
 			var params = new URLSearchParams();
 			params.append('image', this.sc[index].src3);
 			params.append('name', this.sc[index].name3);
 			params.append('price', 200);
+			params.append('abc', 123);
 			params.append('num', 1);
 			axios.post('/gouwuc',params).then(function (response) {
 				alert(response.data)
@@ -385,10 +402,15 @@ export default {
 			});
 		},
 		pos4(index){
+			this.$message({
+				  message: '成功加入购物车',
+				  type: 'success'
+			});
 			var params = new URLSearchParams();
 			params.append('image', this.sc[index].src4);
 			params.append('name', this.sc[index].name4);
 			params.append('price', 300);
+			params.append('abc', 123);
 			params.append('num', 1);
 			axios.post('/gouwuc',params).then(function (response) {
 				alert(response.data)
@@ -398,10 +420,15 @@ export default {
 			});
 		},
 		pos5(index){
+			this.$message({
+				  message: '成功加入购物车',
+				  type: 'success'
+			});
 			var params = new URLSearchParams();
 			params.append('image', this.sc[index].src5);
 			params.append('name', this.sc[index].name5);
 			params.append('price', 500);
+			params.append('abc', 123);
 			params.append('num', 1);
 			axios.post('/gouwuc',params).then(function (response) {
 				alert(response.data)
@@ -411,10 +438,15 @@ export default {
 			});
 		},
 		pos6(index){
+			this.$message({
+				  message: '成功加入购物车',
+				  type: 'success'
+			});
 			var params = new URLSearchParams();
 			params.append('image', this.sc[index].src6);
 			params.append('name', this.sc[index].name6);
 			params.append('price', 800);
+			params.append('abc', 123);
 			params.append('num', 1);
 			axios.post('/gouwuc',params).then(function (response) {
 				alert(response.data)
@@ -424,10 +456,15 @@ export default {
 			});
 		},
 		pos7(index){
+			this.$message({
+				  message: '成功加入购物车',
+				  type: 'success'
+			});
 			var params = new URLSearchParams();
 			params.append('image', this.sc[index].src7);
 			params.append('name', this.sc[index].name7);
 			params.append('price', 1200);
+			params.append('abc', 123);
 			params.append('num', 1);
 			axios.post('/gouwuc',params).then(function (response) {
 				alert(response.data)
@@ -436,12 +473,6 @@ export default {
 			console.log(error);
 			});
 		},
-
-		
-		
-		
-		
-			
 	}
 }
 

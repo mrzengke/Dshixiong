@@ -11,11 +11,13 @@
 		</div>
 		<div class="ztou2">
 			<div class="ztou2-1">
-				<h3>三维设计平台模板</h3>
+				<h3>{{mingz}}</h3>
 				<div class="ztou2-2">
 					<div class="ztou2-3">
-						<div v-for="item in xiangq">
-							<img v-bind:src="item.img" alt="">
+						<div>
+							<!-- v-for="item in xiangq" -->
+							<!-- <img v-bind:src="item.img" alt=""> -->
+							<img :src="this.tup" alt="">
 						</div>
 						<div class="ztou3">
 							<p>模板水印：模板水印仅用于防盗防刷，无其他含义。</p>
@@ -55,7 +57,7 @@
 							<a href="javascript:void(null)">更多 ></a>
 						</div>
 						<div v-for="tiem in xiangq4">
-							<img v-bind:src="tiem.img" alt="">
+							<img :src="tiem.img" alt="">
 						</div>
 					</div>
 				</div>
@@ -69,15 +71,17 @@
 export default	{
 	data(){
 		return{
-			img:'',
-			xiangq:[
-				{img:require('../imges/xiangq/1.png')},
-				{img:require('../imges/xiangq/2.png')},
-				{img:require('../imges/xiangq/3.png')},
-				{img:require('../imges/xiangq/4.png')},
-				{img:require('../imges/xiangq/5.png')},
-				{img:require('../imges/xiangq/6.png')},
-			],
+			// img:'',
+			mingz:name,
+			tup:'',
+			// xiangq:[
+			// 	{img:require('../imges/xiangq/1.png')},
+			// 	{img:require('../imges/xiangq/2.png')},
+			// 	{img:require('../imges/xiangq/3.png')},
+			// 	{img:require('../imges/xiangq/4.png')},
+			// 	{img:require('../imges/xiangq/5.png')},
+			// 	{img:require('../imges/xiangq/6.png')},
+			// ],
 			xiangq1:[
 				{name:"作者：三三"},
 				{name:"文件格式：.red .zip"},
@@ -98,22 +102,23 @@ export default	{
 		}
 	},
 	created(){
-		   this.getParams()
-		},
-		methods: {
-		  getParams () {
-			// 取到路由带过来的参数 
-			var routerParams = this.$route.params.img
-			var name = this.$route.params.name
-			// 将数据放在当前组件的数据内
-			console.log(routerParams)
-			console.log(name)
-		  }
-		},
-		watch: {
-		// 监测路由变化,只要变化了就调用获取路由参数方法将数据存储本组件即可
-		  '$route': 'getParams'
-		},
+	   this.getParams()
+	},
+	methods: {
+	  getParams () {
+		// 取到路由带过来的参数 
+		var routerParams = this.$route.params.img
+		var name = this.$route.params.name
+		// 将数据放在当前组件的数据内
+		console.log(name)
+		this.mingz = name
+		this.tup = routerParams
+	  }
+	},
+	watch: {
+	// 监测路由变化,只要变化了就调用获取路由参数方法将数据存储本组件即可
+	  '$route': 'getParams'
+	},
 }	
 </script>
 
@@ -258,6 +263,7 @@ a{
 	height: 200px;
 	overflow: hidden;
 	font-size: 14px;
+	float: right;
 }
 .ztou2-9 p{
 	float: left;

@@ -54,7 +54,7 @@
 						</el-table-column>
 				</el-table>
 				<div class="xbao">
-					<button>结算</button>
+					<el-button type="text" @click="open(countList)">结算</el-button>
 					<div class="xtou3-2">总价钱:<span>￥{{countList}}</span></div>	
 					<div class="xtou3-3">已选择:<span>{{jisuana}}</span>件商品</div>
 				</div>
@@ -77,6 +77,7 @@ export default {
   props: {},
 	data() {
 		return {
+			zz:[],
 			list: [],
 			jisuan:0,
 			count: 0,
@@ -95,6 +96,7 @@ export default {
 			var b = 0;
 			for (let i = 0; i < this.list.length; i++) {
 				if (this.list[i].checked == true) {
+					this.zz[i] = this.list[i]._id;
 					a += this.list[i].price * this.list[i].num;
 					b = b+1;
 				}
@@ -107,7 +109,6 @@ export default {
 			for (let i = 0; i < this.list.length; i++) {
 				if (this.list[i].checked == true) {
 					b = b+1;
-					console.log(b);
 				}
 			}
 			this.jisuan = b;
@@ -143,15 +144,59 @@ export default {
 			});
 	},
 	methods: {
+		open(countList) {
+			const h = this.$createElement;
+			this.$msgbox({
+				title: '结算',
+				message: h('p', null, [
+					h('span', null, '总金额 '),
+					h('i', { style: 'color: teal' }, countList)
+				]),
+				showCancelButton: true,
+				confirmButtonText: '确定付款',
+				cancelButtonText: '取消',
+				beforeClose: (action, instance, done) => {
+					if (action === 'confirm') {
+						instance.confirmButtonLoading = true;
+						instance.confirmButtonText = '付款中...';
+						setTimeout(() => {
+							done();
+							setTimeout(() => {
+								instance.confirmButtonLoading = false;
+							}, 300);
+						}, 3000);
+					} else {
+						done();
+					}
+				}
+			}).then(action => {
+				this.$message({
+					type: 'info',
+					message: '已付款：￥' + countList
+				});
+				axios.post('/gouwuc',{
+				  _id:this.zz 
+				});
+				 this.$router.push({
+				  path:'/index',
+				})
+				
+			});
+		},
 		removeId(value) {
-
-
-			var ids = value.image
+			this.$message({
+			  message: '删除购物车成功',
+			  type: 'warning'
+			});
+			var ids = value._id
 			for (var i = 0; i < this.list.length; i++) {
-				if (ids == this.list[i].image) {
+				if (ids == this.list[i]._id) {
 					this.list.splice(i, 1);
 				}
 			}
+			axios.post('/gouwuc',{
+			  _id:value._id
+			})
 		},
 		renderHeader: function (h, params) {//实现table表头添加
 			var self = this;

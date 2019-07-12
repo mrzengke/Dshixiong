@@ -1,5 +1,5 @@
 {
-  "name": "mobile",
+  "name": "xiangmu",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "mint-ui": "^2.2.13",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
@@ -15,8 +16,12 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
+    "amazeui-touch2": "^2.0.1",
+    "axios": "^0.18.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "vue-cli-plugin-axios": "0.0.4",
+    "vue-cli-plugin-element": "^1.0.1",
     "vue-template-compiler": "^2.6.10"
   },
   "postcss": {

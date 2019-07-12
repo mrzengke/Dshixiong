@@ -1,4 +1,4 @@
-# mobile
+# xiangmu
 
 ## Project setup
 ```
